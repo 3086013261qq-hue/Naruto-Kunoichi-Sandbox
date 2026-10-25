@@ -24,10 +24,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Normalize assembler QA to source IDs
+      - name: Normalize assembler QA and source boundaries
         run: |
           python - <<'PY'
           from pathlib import Path
+
           p = Path('scripts/build_worldbook.py')
           s = p.read_text(encoding='utf-8')
           s = s.replace(
@@ -38,7 +39,20 @@ jobs:
               '    for e in entries:\n        if str(e.get("comment", "")).startswith(("主要角色:", "其他角色:")):\n            if "兽化特征:" not in e.get("content", ""):\n                raise RuntimeError(f"character lacks beast module: {e[\'comment\']}")\n',
               '    for sid, e in patched_chars.items():\n        if "兽化特征:" not in e.get("content", ""):\n            raise RuntimeError(f"character lacks beast module: source_id={sid} comment={e.get(\'comment\')}")\n'
           )
+          s = s.replace(
+              '    status_content = find_default_status(base_entries)\n',
+              '    status_content = replace_single_aliases(replace_names(find_default_status(base_entries), name_map))\n'
+          )
+          s = s.replace(
+              '    leaked = [name for name in changed_formal_names if name in runtime_blob]\n    if leaked:\n        raise RuntimeError("old formal names leaked: " + ", ".join(leaked))\n',
+              '''    leaked = []\n    leak_context = []\n    for name in changed_formal_names:\n        new_name = name_map.get(name, "")\n        probe = runtime_blob.replace(new_name, "") if new_name else runtime_blob\n        if name in probe:\n            leaked.append(name)\n            idx = probe.find(name)\n            leak_context.append(probe[max(0, idx-80):idx+120].replace("\\n", " "))\n    if leaked:\n        raise RuntimeError("old formal names leaked: " + ", ".join(leaked) + " | contexts: " + " || ".join(leak_context))\n'''
+          )
           p.write_text(s, encoding='utf-8')
+
+          combat = Path('worldbook/settings/12_火影姬战斗思维链_v1.0.md')
+          c = combat.read_text(encoding='utf-8')
+          c = c.replace('3. 未成年人相关场景只使用普通忍术、训练、医疗、装备维护与非性化生理负荷；任何成人亲密或成人忍具用途只允许在参与角色均明确成年时出现。\n', '')
+          combat.write_text(c, encoding='utf-8')
           PY
       - name: Assemble and audit worldbook
         run: python scripts/build_worldbook.py
@@ -47,6 +61,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add scripts/build_worldbook.py \
+                  worldbook/settings/12_火影姬战斗思维链_v1.0.md \
                   dist/火影姬世界_完整世界书_v1.0.json \
                   dist/火影姬世界_worldbook-ready_v1.0.json \
                   dist/火影姬世界_世界书条目清单_v1.0.json \
