@@ -120,7 +120,6 @@ def main():
     post_history = (MOD / "integration" / "post-history-fragment.txt").read_text(encoding="utf-8").strip()
     hormone_regex = load_json(MOD / "dist" / "regex.json")
 
-    # ---- card identity; worldbook正文 is untouched ----
     data["name"] = "火影姬世界"
     data["description"] = "《火影忍者》全员姬化沙盒 · 荷尔蒙档案 MVU"
     data["avatar"] = "none"
@@ -131,12 +130,10 @@ def main():
     if isinstance(data.get("character_book"), dict):
         data["character_book"]["name"] = "火影姬世界"
 
-    # sync common legacy mirrors when present
     for k in ("name", "description", "personality", "scenario", "first_mes", "mes_example", "creator_notes"):
         if k in card:
             card[k] = data.get(k, card[k])
 
-    # ---- native Tavern Helper scripts ----
     ext = data.setdefault("extensions", {})
     th = ext.setdefault("tavern_helper", {})
     scripts = th.setdefault("scripts", [])
@@ -145,16 +142,13 @@ def main():
     upsert_by_name(scripts, script_obj("MVU ZOD", "mvu-zod-schema", zod_js, "仅定义角色荷尔蒙与角色活体铠甲两个 Record。"))
     upsert_by_name(scripts, script_obj("变量状态栏", "hormone-ledger-statusbar", status_js, "火影姬·荷尔蒙档案：仅最新正常 AI 楼单实例面板。"))
 
-    # ---- display-only regex ----
     regexes = ext.setdefault("regex_scripts", [])
     regexes[:] = [r for r in regexes if r.get("scriptName") != hormone_regex.get("scriptName") and r.get("id") != hormone_regex.get("id")]
     regexes.append(hormone_regex)
 
-    # ---- post-history short insurance ----
     old_phi = (data.get("post_history_instructions") or "").strip()
     data["post_history_instructions"] = (old_phi + ("\n\n" if old_phi else "") + post_history).strip()
 
-    # ---- worldbook integration entries; append only, never rewrite original entries ----
     max_id = max((int(e.get("id", -1)) for e in book), default=-1)
     entries_to_add = [
         wb_entry(max_id + 1, "核心规则:火影姬·每回合荷尔蒙记录强制输出", rule_md, 549, True, "after_char"),
@@ -164,7 +158,6 @@ def main():
     for e in entries_to_add:
         upsert_by_comment(book, e)
 
-    # ---- QA ----
     original_unchanged = book[:original_count] == original_entries
     comments = [e.get("comment") for e in book]
     script_names = [s.get("name") for s in scripts]
@@ -173,7 +166,7 @@ def main():
         for e in original_entries
     )
     lock_dir = ROOT / "media" / "mvu" / "lockscreen"
-    lock_pages = sorted([p for p in lock_dir.iterdir() if p.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif"}]) if lock_dir.exists() else []
+    lock_pages = sorted([p for p in lock_dir.rglob("*") if p.is_file() and p.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif"}]) if lock_dir.exists() else []
     checks = {
         "spec_is_ccv3": card.get("spec") == "chara_card_v3" and card.get("spec_version") == "3.0",
         "worldbook_original_entries_byte_semantics_unchanged": original_unchanged,
