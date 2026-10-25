@@ -24,13 +24,30 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Normalize assembler QA to source IDs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/build_worldbook.py')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace(
+              '    if len([e for e in entries if str(e.get("comment", "")).startswith(("主要角色:", "其他角色:"))]) != 92:\n        raise RuntimeError("character count != 92")\n',
+              '    if len(patched_chars) != 92 or set(patched_chars) != expected_ids:\n        raise RuntimeError("character source-id coverage != 92")\n'
+          )
+          s = s.replace(
+              '    for e in entries:\n        if str(e.get("comment", "")).startswith(("主要角色:", "其他角色:")):\n            if "兽化特征:" not in e.get("content", ""):\n                raise RuntimeError(f"character lacks beast module: {e[\'comment\']}")\n',
+              '    for sid, e in patched_chars.items():\n        if "兽化特征:" not in e.get("content", ""):\n            raise RuntimeError(f"character lacks beast module: source_id={sid} comment={e.get(\'comment\')}")\n'
+          )
+          p.write_text(s, encoding='utf-8')
+          PY
       - name: Assemble and audit worldbook
         run: python scripts/build_worldbook.py
       - name: Commit generated worldbook
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist/火影姬世界_完整世界书_v1.0.json \
+          git add scripts/build_worldbook.py \
+                  dist/火影姬世界_完整世界书_v1.0.json \
                   dist/火影姬世界_worldbook-ready_v1.0.json \
                   dist/火影姬世界_世界书条目清单_v1.0.json \
                   qa/最终世界书自动组装审计_v1.0.md
