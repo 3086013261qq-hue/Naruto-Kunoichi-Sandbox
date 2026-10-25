@@ -21,6 +21,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install media QA dependency
+        run: python3 -m pip install --disable-pip-version-check pillow
+
       - name: Rebuild hormone ledger module
         run: python3 modules/hormone-ledger/build.py
 
