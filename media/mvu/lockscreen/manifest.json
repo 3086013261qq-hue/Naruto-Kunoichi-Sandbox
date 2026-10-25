@@ -1,0 +1,92 @@
+{
+  "version": 2,
+  "mode": "static-page-gallery",
+  "background": "media/mvu/142996460_p0_master1200.webp",
+  "books": [
+    {
+      "id": "277699",
+      "source_zip": "media/mvu/lockscreen/277699.zip",
+      "page_count": 28,
+      "pages": [
+        "media/mvu/lockscreen/277699/00001.webp",
+        "media/mvu/lockscreen/277699/00002.webp",
+        "media/mvu/lockscreen/277699/00003.webp",
+        "media/mvu/lockscreen/277699/00004.webp",
+        "media/mvu/lockscreen/277699/00005.webp",
+        "media/mvu/lockscreen/277699/00006.webp",
+        "media/mvu/lockscreen/277699/00007.webp",
+        "media/mvu/lockscreen/277699/00008.webp",
+        "media/mvu/lockscreen/277699/00009.webp",
+        "media/mvu/lockscreen/277699/00010.webp",
+        "media/mvu/lockscreen/277699/00011.webp",
+        "media/mvu/lockscreen/277699/00012.webp",
+        "media/mvu/lockscreen/277699/00013.webp",
+        "media/mvu/lockscreen/277699/00014.webp",
+        "media/mvu/lockscreen/277699/00015.webp",
+        "media/mvu/lockscreen/277699/00016.webp",
+        "media/mvu/lockscreen/277699/00017.webp",
+        "media/mvu/lockscreen/277699/00018.webp",
+        "media/mvu/lockscreen/277699/00019.webp",
+        "media/mvu/lockscreen/277699/00020.webp",
+        "media/mvu/lockscreen/277699/00021.webp",
+        "media/mvu/lockscreen/277699/00022.webp",
+        "media/mvu/lockscreen/277699/00023.webp",
+        "media/mvu/lockscreen/277699/00024.webp",
+        "media/mvu/lockscreen/277699/00025.webp",
+        "media/mvu/lockscreen/277699/00026.webp",
+        "media/mvu/lockscreen/277699/00027.webp",
+        "media/mvu/lockscreen/277699/00028.webp"
+      ]
+    },
+    {
+      "id": "474873",
+      "source_zip": "media/mvu/lockscreen/474873.zip",
+      "page_count": 33,
+      "pages": [
+        "media/mvu/lockscreen/474873/00001.webp",
+        "media/mvu/lockscreen/474873/00002.webp",
+        "media/mvu/lockscreen/474873/00003.webp",
+        "media/mvu/lockscreen/474873/00004.webp",
+        "media/mvu/lockscreen/474873/00005.webp",
+        "media/mvu/lockscreen/474873/00006.webp",
+        "media/mvu/lockscreen/474873/00007.webp",
+        "media/mvu/lockscreen/474873/00008.webp",
+        "media/mvu/lockscreen/474873/00009.webp",
+        "media/mvu/lockscreen/474873/00010.webp",
+        "media/mvu/lockscreen/474873/00011.webp",
+        "media/mvu/lockscreen/474873/00012.webp",
+        "media/mvu/lockscreen/474873/00013.webp",
+        "media/mvu/lockscreen/474873/00014.webp",
+        "media/mvu/lockscreen/474873/00015.webp",
+        "media/mvu/lockscreen/474873/00016.webp",
+        "media/mvu/lockscreen/474873/00017.webp",
+        "media/mvu/lockscreen/474873/00018.webp",
+        "media/mvu/lockscreen/474873/00019.webp",
+        "media/mvu/lockscreen/474873/00020.webp",
+        "media/mvu/lockscreen/474873/00021.webp",
+        "media/mvu/lockscreen/474873/00022.webp",
+        "media/mvu/lockscreen/474873/00023.webp",
+        "media/mvu/lockscreen/474873/00024.webp",
+        "media/mvu/lockscreen/474873/00025.webp",
+        "media/mvu/lockscreen/474873/00026.webp",
+        "media/mvu/lockscreen/474873/00027.webp",
+        "media/mvu/lockscreen/474873/00028.webp",
+        "media/mvu/lockscreen/474873/00029.webp",
+        "media/mvu/lockscreen/474873/00030.webp",
+        "media/mvu/lockscreen/474873/00031.webp",
+        "media/mvu/lockscreen/474873/00032.webp",
+        "media/mvu/lockscreen/474873/00033.webp"
+      ]
+    }
+  ],
+  "interaction": {
+    "swipe": "previous-next-page",
+    "tap_center": "enter-main-mvu",
+    "remember_last_page": true,
+    "auto_play": false
+  },
+  "load_policy": {
+    "preload_neighbors": 1,
+    "never_preload_entire_book": true
+  }
+}
