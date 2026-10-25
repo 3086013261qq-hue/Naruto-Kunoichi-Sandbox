@@ -1,0 +1,17 @@
+{
+  "id": "a5d59e93-d19f-4c12-9109-bda3623c9569",
+  "scriptName": "♡ 荷尔蒙记录 · 本回合",
+  "findRegex": "/<hormone>\\s*([\\s\\S]*?)\\s*<\\/hormone>\\s*/gi",
+  "replaceString": "<details style=\"background:#17151a;color:#f1e3c8;border:1px solid #d8b36a44;border-radius:4px;padding:4px 10px\"><summary style=\"min-height:44px;line-height:44px;cursor:pointer\">♡ 荷尔蒙记录 · 本回合</summary><pre style=\"white-space:pre-wrap;overflow-wrap:anywhere;font:inherit\">$1</pre></details>",
+  "trimStrings": [],
+  "placement": [
+    2
+  ],
+  "disabled": false,
+  "markdownOnly": true,
+  "promptOnly": false,
+  "runOnEdit": true,
+  "substituteRegex": 0,
+  "minDepth": null,
+  "maxDepth": null
+}
