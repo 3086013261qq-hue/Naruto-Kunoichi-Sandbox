@@ -403,7 +403,7 @@
     "order": 398,
     "use_regex": true,
     "keys": [
-      "/<story_scene>.*?(?:八门遁甲|休门|生门|伤门|杜门|景门|惊门|死门|朝孔雀|昼虎|夕象|夜凯).*?<\\/story_scene>/s"
+      "/<story_scene>.*?(?:八门遁甲|第一门·开门|第二门·休门|第三门·生门|第四门·伤门|第五门·杜门|第六门·景门|第七门·惊门|第八门·死门|朝孔雀|昼虎|夕象|夜凯).*?<\\/story_scene>/s"
     ]
   },
   {
@@ -418,7 +418,7 @@
     "order": 397,
     "use_regex": true,
     "keys": [
-      "/<story_scene>.*?(?:写轮眼|万花筒写轮眼|天照|月读\\(\\?!\\[\\^<\\\\n\\]\\*无限月读\\)|神威|别天神|须佐能乎|伊邪那岐|伊邪那美).*?<\\/story_scene>/s"
+      "/<story_scene>.*?(?:写轮眼|万花筒写轮眼|天照|(?<!无限)月读|神威|别天神|须佐能乎|伊邪那岐|伊邪那美).*?<\\/story_scene>/s"
     ]
   },
   {
@@ -613,7 +613,7 @@
     "order": 384,
     "use_regex": true,
     "keys": [
-      "/<story_scene>.*?(?:轮回眼|神罗天征|万象天引|地爆天星|修罗道|人间道|畜生道|饿鬼道|地狱道|轮回天生|天手力|轮墓).*?<\\/story_scene>/s"
+      "/<story_scene>.*?(?:轮回眼|神罗天征|万象天引|地爆天星|修罗道|人间道|畜生道|饿鬼道|地狱道|外道魔像|轮回天生|天手力|轮墓).*?<\\/story_scene>/s"
     ]
   },
   {
@@ -1221,7 +1221,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 299,
+    "order": 202,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(春野樱|小樱|樱).*?<\\/story_scene>/s"
@@ -1236,7 +1236,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 298,
+    "order": 203,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(春野樱|小樱|樱).*?<\\/story_scene>/s"
@@ -1251,7 +1251,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 297,
+    "order": 204,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(春野樱|小樱|樱).*?<\\/story_scene>/s"
@@ -1266,7 +1266,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 296,
+    "order": 205,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(日向雏田|雏田).*?<\\/story_scene>/s"
@@ -1281,7 +1281,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 295,
+    "order": 206,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(日向雏田|雏田).*?<\\/story_scene>/s"
@@ -1296,7 +1296,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 294,
+    "order": 207,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(日向雏田|雏田).*?<\\/story_scene>/s"
@@ -1311,7 +1311,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 293,
+    "order": 208,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(日向花火|花火).*?<\\/story_scene>/s"
@@ -1326,7 +1326,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 292,
+    "order": 209,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(日向花火|花火).*?<\\/story_scene>/s"
@@ -1341,7 +1341,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 291,
+    "order": 210,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(山中井野|井野).*?<\\/story_scene>/s"
@@ -1356,7 +1356,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 290,
+    "order": 211,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(山中井野|井野).*?<\\/story_scene>/s"
@@ -1371,7 +1371,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 289,
+    "order": 212,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(山中井野|井野).*?<\\/story_scene>/s"
@@ -1386,7 +1386,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 288,
+    "order": 213,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(天天).*?<\\/story_scene>/s"
@@ -1401,7 +1401,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 287,
+    "order": 214,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(天天).*?<\\/story_scene>/s"
@@ -1416,7 +1416,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 286,
+    "order": 215,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(手鞠).*?<\\/story_scene>/s"
@@ -1431,7 +1431,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 285,
+    "order": 216,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(手鞠).*?<\\/story_scene>/s"
@@ -1446,7 +1446,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 284,
+    "order": 217,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(夕日红).*?<\\/story_scene>/s"
@@ -1461,7 +1461,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 283,
+    "order": 218,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(夕日红).*?<\\/story_scene>/s"
@@ -1476,7 +1476,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 282,
+    "order": 219,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(卯月夕颜|夕颜).*?<\\/story_scene>/s"
@@ -1491,7 +1491,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 281,
+    "order": 220,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(御手洗红豆|红豆).*?<\\/story_scene>/s"
@@ -1506,7 +1506,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 280,
+    "order": 221,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(千手纲手|纲手).*?<\\/story_scene>/s"
@@ -1521,7 +1521,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 279,
+    "order": 222,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(千手纲手|纲手).*?<\\/story_scene>/s"
@@ -1536,7 +1536,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 278,
+    "order": 223,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(千手纲手|纲手).*?<\\/story_scene>/s"
@@ -1551,7 +1551,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 277,
+    "order": 224,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(千手纲手|纲手).*?<\\/story_scene>/s"
@@ -1566,7 +1566,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 276,
+    "order": 225,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(静音).*?<\\/story_scene>/s"
@@ -1581,7 +1581,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 275,
+    "order": 226,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(照美冥|冥).*?<\\/story_scene>/s"
@@ -1596,7 +1596,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 274,
+    "order": 227,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(多由也).*?<\\/story_scene>/s"
@@ -1611,7 +1611,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 273,
+    "order": 228,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(小南).*?<\\/story_scene>/s"
@@ -1626,7 +1626,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 272,
+    "order": 229,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(小南).*?<\\/story_scene>/s"
@@ -1641,7 +1641,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 271,
+    "order": 230,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(紫阳花).*?<\\/story_scene>/s"
@@ -1656,7 +1656,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 270,
+    "order": 231,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(津奈美).*?<\\/story_scene>/s"
@@ -1671,7 +1671,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 269,
+    "order": 232,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(风花小雪|富士风雪绘|小雪|雪绘).*?<\\/story_scene>/s"
@@ -1686,7 +1686,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 268,
+    "order": 233,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(春菜).*?<\\/story_scene>/s"
@@ -1701,7 +1701,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 267,
+    "order": 234,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(紫苑).*?<\\/story_scene>/s"
@@ -1716,7 +1716,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 266,
+    "order": 235,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(红莲).*?<\\/story_scene>/s"
@@ -1731,7 +1731,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 265,
+    "order": 236,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(抚子静香|静香).*?<\\/story_scene>/s"
@@ -1746,7 +1746,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 264,
+    "order": 237,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(芙).*?<\\/story_scene>/s"
@@ -1761,7 +1761,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 263,
+    "order": 238,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(二位由木人|由木人).*?<\\/story_scene>/s"
@@ -1776,7 +1776,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 262,
+    "order": 239,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(砂忍卷|卷).*?<\\/story_scene>/s"
@@ -1791,7 +1791,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 261,
+    "order": 240,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(叶仓).*?<\\/story_scene>/s"
@@ -1806,7 +1806,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 260,
+    "order": 241,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(药师野乃宇|野乃宇).*?<\\/story_scene>/s"
@@ -1821,7 +1821,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 259,
+    "order": 242,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(漩涡玖辛奈|玖辛奈).*?<\\/story_scene>/s"
@@ -1836,7 +1836,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 258,
+    "order": 243,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波美琴|美琴).*?<\\/story_scene>/s"
@@ -1851,7 +1851,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 257,
+    "order": 244,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波泉|泉).*?<\\/story_scene>/s"
@@ -1866,7 +1866,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 256,
+    "order": 245,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波治里|治里).*?<\\/story_scene>/s"
@@ -1881,7 +1881,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 255,
+    "order": 246,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(野原琳|琳).*?<\\/story_scene>/s"
@@ -1896,7 +1896,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 254,
+    "order": 247,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(黑土).*?<\\/story_scene>/s"
@@ -1911,7 +1911,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 253,
+    "order": 248,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(萨姆伊).*?<\\/story_scene>/s"
@@ -1926,7 +1926,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 252,
+    "order": 249,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(不风).*?<\\/story_scene>/s"
@@ -1941,7 +1941,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 251,
+    "order": 250,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(阿玛鲁).*?<\\/story_scene>/s"
@@ -1956,7 +1956,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 250,
+    "order": 251,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(贰).*?<\\/story_scene>/s"
@@ -1971,7 +1971,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 249,
+    "order": 252,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(漩涡香燐|香燐).*?<\\/story_scene>/s"
@@ -1986,7 +1986,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 248,
+    "order": 253,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(大筒木辉夜|辉夜).*?<\\/story_scene>/s"
@@ -2001,7 +2001,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 247,
+    "order": 254,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波光|光).*?<\\/story_scene>/s"
@@ -2042,7 +2042,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 199,
+    "order": 102,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(漩涡鸣子|鸣子).*?<\\/story_scene>/s"
@@ -2057,7 +2057,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 198,
+    "order": 103,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(漩涡鸣子|鸣子).*?<\\/story_scene>/s"
@@ -2072,7 +2072,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 197,
+    "order": 104,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(漩涡鸣子|鸣子).*?<\\/story_scene>/s"
@@ -2087,7 +2087,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 196,
+    "order": 105,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波佐月|佐月).*?<\\/story_scene>/s"
@@ -2102,7 +2102,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 195,
+    "order": 106,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波佐月|佐月).*?<\\/story_scene>/s"
@@ -2117,7 +2117,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 194,
+    "order": 107,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波佐月|佐月).*?<\\/story_scene>/s"
@@ -2132,7 +2132,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 193,
+    "order": 108,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(我爱罗奈|罗奈).*?<\\/story_scene>/s"
@@ -2147,7 +2147,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 192,
+    "order": 109,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(我爱罗奈|罗奈).*?<\\/story_scene>/s"
@@ -2162,7 +2162,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 191,
+    "order": 110,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(日向宁奈|宁奈).*?<\\/story_scene>/s"
@@ -2177,7 +2177,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 190,
+    "order": 111,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(日向宁奈|宁奈).*?<\\/story_scene>/s"
@@ -2192,7 +2192,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 189,
+    "order": 112,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(李洛可|洛可|小洛).*?<\\/story_scene>/s"
@@ -2207,7 +2207,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 188,
+    "order": 113,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(李洛可|洛可|小洛).*?<\\/story_scene>/s"
@@ -2222,7 +2222,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 187,
+    "order": 114,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(奈良鹿乃|鹿乃).*?<\\/story_scene>/s"
@@ -2237,7 +2237,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 186,
+    "order": 115,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(奈良鹿乃|鹿乃).*?<\\/story_scene>/s"
@@ -2252,7 +2252,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 185,
+    "order": 116,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(秋道丁香|丁香).*?<\\/story_scene>/s"
@@ -2267,7 +2267,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 184,
+    "order": 117,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(秋道丁香|丁香).*?<\\/story_scene>/s"
@@ -2282,7 +2282,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 183,
+    "order": 118,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(旗木卡卡希|卡卡希).*?<\\/story_scene>/s"
@@ -2297,7 +2297,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 182,
+    "order": 119,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(旗木卡卡希|卡卡希).*?<\\/story_scene>/s"
@@ -2312,7 +2312,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 181,
+    "order": 120,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(猿飞明日香|明日香).*?<\\/story_scene>/s"
@@ -2327,7 +2327,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 180,
+    "order": 121,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(迈特凯莉|凯莉).*?<\\/story_scene>/s"
@@ -2342,7 +2342,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 179,
+    "order": 122,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(自来夜|好色仙人|蛤蟆仙人).*?<\\/story_scene>/s"
@@ -2357,7 +2357,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 178,
+    "order": 123,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(大蛇姬).*?<\\/story_scene>/s"
@@ -2372,7 +2372,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 177,
+    "order": 124,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(药师兜美|兜美|兜美前辈|兜美学姐).*?<\\/story_scene>/s"
@@ -2387,7 +2387,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 176,
+    "order": 125,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(海野伊露香|伊露香).*?<\\/story_scene>/s"
@@ -2402,7 +2402,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 175,
+    "order": 126,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(千手柱华|柱华|初代目火影).*?<\\/story_scene>/s"
@@ -2417,7 +2417,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 174,
+    "order": 127,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(千手扉奈|扉奈|二代目火影).*?<\\/story_scene>/s"
@@ -2432,7 +2432,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 173,
+    "order": 128,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(猿飞日和|日和|三代目火影).*?<\\/story_scene>/s"
@@ -2447,7 +2447,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 172,
+    "order": 129,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(波风水音|水音|四代目火影).*?<\\/story_scene>/s"
@@ -2462,7 +2462,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 171,
+    "order": 130,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(君麻璃|麻璃).*?<\\/story_scene>/s"
@@ -2477,7 +2477,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 170,
+    "order": 131,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(蝎|赤砂之蝎).*?<\\/story_scene>/s"
@@ -2492,7 +2492,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 169,
+    "order": 132,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(迪达莉).*?<\\/story_scene>/s"
@@ -2507,7 +2507,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 168,
+    "order": 133,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(角都美|都美).*?<\\/story_scene>/s"
@@ -2522,7 +2522,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 167,
+    "order": 134,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(飞段).*?<\\/story_scene>/s"
@@ -2537,7 +2537,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 166,
+    "order": 135,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(长门|佩恩).*?<\\/story_scene>/s"
@@ -2552,7 +2552,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 165,
+    "order": 136,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波伊月|伊月).*?<\\/story_scene>/s"
@@ -2567,7 +2567,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 164,
+    "order": 137,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波静水|静水).*?<\\/story_scene>/s"
@@ -2582,7 +2582,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 163,
+    "order": 138,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波带乃|带乃|阿飞).*?<\\/story_scene>/s"
@@ -2597,7 +2597,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 162,
+    "order": 139,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波斑奈|斑奈).*?<\\/story_scene>/s"
@@ -2612,7 +2612,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 161,
+    "order": 140,
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(宇智波泉奈|泉奈).*?<\\/story_scene>/s"
@@ -2653,7 +2653,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 99,
+    "order": 2,
     "use_regex": true,
     "keys": [
       "/<status>[\\s\\S]*?当前位置:[^\\n<]*(云隐村)[\\s\\S]*?<\\/status>/s",
@@ -2669,7 +2669,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 98,
+    "order": 3,
     "use_regex": true,
     "keys": [
       "/<status>[\\s\\S]*?当前位置:[^\\n<]*(岩隐村)[\\s\\S]*?<\\/status>/s",
@@ -2685,7 +2685,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 97,
+    "order": 4,
     "use_regex": true,
     "keys": [
       "/<status>[\\s\\S]*?当前位置:[^\\n<]*(木叶村|木叶忍者村)[\\s\\S]*?<\\/status>/s",
@@ -2701,7 +2701,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 96,
+    "order": 5,
     "use_regex": true,
     "keys": [
       "/<status>[\\s\\S]*?当前位置:[^\\n<]*(波之国)[\\s\\S]*?<\\/status>/s",
@@ -2717,7 +2717,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 95,
+    "order": 6,
     "use_regex": true,
     "keys": [
       "/<status>[\\s\\S]*?当前位置:[^\\n<]*(砂隐村)[\\s\\S]*?<\\/status>/s",
@@ -2733,7 +2733,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 94,
+    "order": 7,
     "use_regex": true,
     "keys": [
       "/<status>[\\s\\S]*?当前位置:[^\\n<]*(雨隐村)[\\s\\S]*?<\\/status>/s",
@@ -2749,7 +2749,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 93,
+    "order": 8,
     "use_regex": true,
     "keys": [
       "/<status>[\\s\\S]*?当前位置:[^\\n<]*(雾隐村)[\\s\\S]*?<\\/status>/s",
@@ -2765,7 +2765,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 92,
+    "order": 9,
     "use_regex": true,
     "keys": [
       "/<status>[\\s\\S]*?当前位置:[^\\n<]*(音隐村|音忍村)[\\s\\S]*?<\\/status>/s",
@@ -2781,7 +2781,7 @@
     "selective": true,
     "position": "after_char",
     "depth": 4,
-    "order": 91,
+    "order": 10,
     "use_regex": true,
     "keys": [
       "/<status>[\\s\\S]*?当前位置:[^\\n<]*(铁之国)[\\s\\S]*?<\\/status>/s",

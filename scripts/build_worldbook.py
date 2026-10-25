@@ -304,9 +304,13 @@ def parse_skill_entries() -> Dict[str, dict]:
         terms = [x.strip() for x in (km.group(1).split("|") if km else [title]) if x.strip()]
         # settings/08 final trigger anti-explosion rules override broad candidates.
         if title == "八门遁甲":
-            terms = [x for x in terms if x != "开门"]
+            terms = [
+                "八门遁甲", "第一门·开门", "第二门·休门", "第三门·生门", "第四门·伤门",
+                "第五门·杜门", "第六门·景门", "第七门·惊门", "第八门·死门",
+                "朝孔雀", "昼虎", "夕象", "夜凯",
+            ]
         if title == "轮回眼":
-            terms = [x for x in terms if x != "外道"]
+            terms = ["外道魔像" if x == "外道" else x for x in terms]
         result[title] = {"content": content, "terms": terms}
 
     s11 = read_text(SET_DIR / "11_忍阶实力阈值与瞳术进化补遗_v1.1.md")
@@ -489,7 +493,11 @@ def build_settings(template: dict, name_map: Dict[str, str]) -> Tuple[List[dict]
             selective=True,
             position="after_char",
             depth=4,
-            keys=[regex_key(item["terms"], wrapped_story_scene=True)],
+            keys=[(
+                r"/<story_scene>.*?(?:写轮眼|万花筒写轮眼|天照|(?<!无限)月读|神威|别天神|须佐能乎|伊邪那岐|伊邪那美).*?<\/story_scene>/s"
+                if title == "技能:写轮眼"
+                else regex_key(item["terms"], wrapped_story_scene=True)
+            )],
             use_regex=True,
             exclude_recursion=True,
         ))
@@ -657,28 +665,28 @@ def build() -> Tuple[dict, dict, str]:
     entries.append(section_marker(template, "核心设定:结尾", 301))
 
     entries.append(section_marker(template, "主要角色:起始", 300))
-    order = 299
+    order = 202
     for sid in range(51, 104):
         e = patched_chars[sid]
         e["insertion_order"] = order
         entries.append(e)
-        order -= 1
+        order += 1
     entries.append(section_marker(template, "主要角色:结尾", 201))
 
     entries.append(section_marker(template, "其他角色:起始", 200))
-    order = 199
+    order = 102
     for sid in range(10, 49):
         e = patched_chars[sid]
         e["insertion_order"] = order
         entries.append(e)
-        order -= 1
+        order += 1
     entries.append(section_marker(template, "其他角色:结尾", 101))
 
     entries.append(section_marker(template, "地点:起始", 100))
     location_paths = sorted(p for p in LOCATION_DIR.glob("[0-9][0-9]_*.md"))
     if len(location_paths) != 9:
         raise RuntimeError(f"expected 9 location files, got {len(location_paths)}")
-    order = 99
+    order = 2
     for path in location_paths:
         loc = parse_location(path)
         entries.append(mk_entry(
@@ -695,7 +703,7 @@ def build() -> Tuple[dict, dict, str]:
             use_regex=True,
             exclude_recursion=True,
         ))
-        order -= 1
+        order += 1
     entries.append(section_marker(template, "地点:结尾", 1))
 
     for i, e in enumerate(entries):
