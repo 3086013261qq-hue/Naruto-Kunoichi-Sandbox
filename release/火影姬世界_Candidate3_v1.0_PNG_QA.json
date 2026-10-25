@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "json": "火影姬世界_Candidate3_v1.0.json",
+  "png": "火影姬世界_Candidate3_v1.0.png",
+  "json_sha256": "3659e6c20046fb5216213dd11cf34ce2cf1eb9c7081f16dd0fb5abcd98760f21",
+  "png_sha256": "fc3a3280eb08dfae9f02b7c85fd28a1c60bb15260e768f1dc06f691f56305d8c",
+  "ccv3_payload_exact_json_bytes": true,
+  "chara_payload_exact_json_bytes": true,
+  "all_png_chunk_crcs_valid": true,
+  "existing_cover_chunks_unchanged": true,
+  "cover_chunks_sha256": "74c4b2d745594eb23863e300a147925a9a24a3400cb91e7b46b101ad409f22b2",
+  "note": "Metadata packaging QA only; real Android/SillyTavern acceptance is pending."
+}
