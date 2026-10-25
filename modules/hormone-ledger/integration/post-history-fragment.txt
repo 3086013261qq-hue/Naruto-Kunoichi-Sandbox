@@ -1,0 +1,1 @@
+每次正常 assistant 回复结束前必须输出一个完整的 <hormone>...</hormone>；具体数值与铠甲更新服从正式规则；禁止输出第二个 hormone 块。

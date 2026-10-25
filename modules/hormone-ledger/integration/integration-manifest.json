@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "status": "fragments-only-not-installed",
+  "scope": "modules/hormone-ledger/",
+  "fact_source": "raw assistant hormone block",
+  "schema_fields": ["角色荷尔蒙", "角色活体铠甲"],
+  "native_envelope": "message variables stat_data",
+  "scripts": {
+    "MVU": "mvu-core-script-fragment.js",
+    "MVU ZOD": "schema-script-fragment.js",
+    "变量状态栏": "../dist/hormone-ledger.js"
+  },
+  "worldbook_fragments": {
+    "常驻蓝灯输出规则": "worldbook-rule-fragment.md",
+    "变量列表": "variable-list-fragment.txt",
+    "[initvar]变量初始化勿开": "initvar-fragment.yaml"
+  },
+  "post_history_instructions": "post-history-fragment.txt",
+  "display_only_regex": "../dist/regex.json",
+  "installation": "Assembler imports file content, not these relative paths. Do not run a second model/JSONPatch writer for the two records. No installation is performed by this module.",
+  "media_commit": "b4b11c5efbbc99e1b7d92d79f32b937cfabd2f27",
+  "native_reference": "咩咩制卡·全栈_v1.0.0 / MVU/骨架",
+  "user_overrides": [
+    "Only one panel at the latest normal assistant mes_text; no per-floor full UI",
+    "Raw hormone snapshots replace model JSONPatch for these two records",
+    "Strict requested integer bounds reject invalid snapshots instead of clamping",
+    "Compatible role/is_user shapes; no role-only assistant test",
+    "Event driven replay; no timers or polling"
+  ]
+}
