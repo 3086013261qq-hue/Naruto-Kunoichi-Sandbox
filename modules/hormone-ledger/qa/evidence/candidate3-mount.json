@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "Actual embedded status script in hidden srcdoc type=module iframe; native host APIs simulated; external media blocked; not real Android/SillyTavern",
+  "results": [
+    {
+      "variant": "Candidate3",
+      "scenario": "opening-existing-dom",
+      "initial_panel_count": 1,
+      "result": "PASS"
+    },
+    {
+      "variant": "Candidate3",
+      "scenario": "normal-reply-late-dom",
+      "initial_panel_count": 1,
+      "result": "PASS"
+    }
+  ]
+}

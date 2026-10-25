@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "dist" / "火影姬世界_worldbook-ready_v1.0.json"
 MOD = ROOT / "modules" / "hormone-ledger"
 OUT_DIR = ROOT / "release"
-OUT_JSON = OUT_DIR / "火影姬世界_Candidate2_v1.0.json"
-OUT_QA = OUT_DIR / "火影姬世界_Candidate2_v1.0_QA.json"
+OUT_JSON = OUT_DIR / "火影姬世界_Candidate3_v1.0.json"
+OUT_QA = OUT_DIR / "火影姬世界_Candidate3_v1.0_QA.json"
 
 
 def load_json(path: Path):

@@ -7,13 +7,25 @@ export function createGallery(document, pages, enter, storage) {
   image.draggable = false;
   const pageLabel = document.createElement('span');
   pageLabel.className = 'hl-page';
+  const nav = document.createElement('nav'); nav.className = 'hl-gallery-nav';
+  nav.setAttribute('aria-label', '锁屏翻页');
+  const previous = document.createElement('button'), next = document.createElement('button');
+  for (const [button, label, text, delta] of [[previous, '上一页', '‹', -1], [next, '下一页', '›', 1]]) {
+    button.type = 'button'; button.className = 'hl-page-button';
+    button.setAttribute('aria-label', label); button.textContent = text;
+    button.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); show(current + delta); });
+  }
+  for (const event of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel']) {
+    nav.addEventListener(event, e => e.stopPropagation());
+  }
+  nav.append(previous, pageLabel, next);
   const center = document.createElement('button');
   center.type = 'button'; center.className = 'hl-enter';
   center.setAttribute('aria-label', '进入荷尔蒙档案');
   const fallback = document.createElement('span');
   fallback.className = 'hl-fallback';
   fallback.textContent = '图片暂不可用 · 轻触中央进入档案';
-  panel.append(image, fallback, pageLabel, center);
+  panel.append(image, fallback, center, nav);
   let current = 0, down = null, dragged = false;
   const preload = new Map();
   try { current = Math.max(0, Math.min(pages.length - 1, Number(storage?.getItem('hormone-ledger:gallery-page')) || 0)); } catch {}
@@ -26,6 +38,8 @@ export function createGallery(document, pages, enter, storage) {
     image.alt = `锁屏第 ${current + 1} / ${pages.length} 页`;
     image.src = pages[current];
     pageLabel.textContent = `${current + 1} / ${pages.length}`;
+    previous.disabled = current === 0;
+    next.disabled = current === pages.length - 1;
     for (const [i, img] of preload) if (Math.abs(i - current) > 1 || i === current) { img.removeAttribute('src'); preload.delete(i); }
     for (const i of [current - 1, current + 1]) {
       if (pages[i] && !preload.has(i)) {

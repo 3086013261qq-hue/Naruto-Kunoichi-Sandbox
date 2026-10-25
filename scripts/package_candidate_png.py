@@ -10,9 +10,9 @@ import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CARD = ROOT / 'release/火影姬世界_Candidate2_v1.0.json'
-OUTPUT = ROOT / 'release/火影姬世界_Candidate2_v1.0.png'
-REPORT = ROOT / 'release/火影姬世界_Candidate2_v1.0_PNG_QA.json'
+CARD = ROOT / 'release/火影姬世界_Candidate3_v1.0.json'
+OUTPUT = ROOT / 'release/火影姬世界_Candidate3_v1.0.png'
+REPORT = ROOT / 'release/火影姬世界_Candidate3_v1.0_PNG_QA.json'
 SIGNATURE = b'\x89PNG\r\n\x1a\n'
 
 def chunks(data):
@@ -40,8 +40,8 @@ def text_chunk(keyword, content):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--cover', type=Path, default=OUTPUT,
-                        help='Existing imported PNG; default repacks committed Candidate2 itself')
+    parser.add_argument('--cover', type=Path, default=ROOT / 'release/火影姬世界_Candidate2_v1.0.png',
+                        help='Existing imported PNG; default repacks committed Candidate3 itself')
     args = parser.parse_args()
     card_bytes = CARD.read_bytes()
     card = json.loads(card_bytes)

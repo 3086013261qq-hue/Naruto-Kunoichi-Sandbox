@@ -10,11 +10,19 @@ export function createUI(document) {
   const header = document.createElement('header');
   const title = document.createElement('h2'); title.textContent = '火影姬 · 荷尔蒙档案';
   const count = document.createElement('span');
-  header.append(title, count);
+  const back = document.createElement('button');
+  back.type = 'button'; back.className = 'hl-back'; back.textContent = '‹ 锁屏';
+  back.setAttribute('aria-label', '返回锁屏');
+  header.append(title, count, back);
   const list = document.createElement('div'); list.className = 'hl-list';
   main.append(header, list);
   const gallery = createGallery(document, pages, () => {
     gallery.panel.hidden = true; main.hidden = false; gallery.release();
+  });
+  back.addEventListener('click', e => {
+    e.preventDefault(); e.stopPropagation();
+    main.hidden = true; gallery.panel.hidden = false;
+    gallery.show(gallery.index);
   });
   shadow.append(style, gallery.panel, main);
   const cards = new Map();

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "width": 320,
+      "status": "PASS",
+      "checks": "boundaries, middle pages, gestures, isolation, 17/61 return with decoded image, three reentries, state, 44px targets, no overflow, single UI"
+    },
+    {
+      "width": 360,
+      "status": "PASS",
+      "checks": "boundaries, middle pages, gestures, isolation, 17/61 return with decoded image, three reentries, state, 44px targets, no overflow, single UI"
+    },
+    {
+      "width": 390,
+      "status": "PASS",
+      "checks": "boundaries, middle pages, gestures, isolation, 17/61 return with decoded image, three reentries, state, 44px targets, no overflow, single UI"
+    },
+    {
+      "width": 440,
+      "status": "PASS",
+      "checks": "boundaries, middle pages, gestures, isolation, 17/61 return with decoded image, three reentries, state, 44px targets, no overflow, single UI"
+    }
+  ],
+  "real_android_sillytavern": "pending"
+}

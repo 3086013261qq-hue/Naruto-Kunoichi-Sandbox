@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "baseline": "35b03b6099c690819d14a53967f4437a2f427ac6",
+  "sealed_lore_baseline": "f007e0c030e70c9ec90c3149c61b4343675b5b1c",
+  "checks": {
+    "only_statusbar_content_differs_from_candidate2": true,
+    "protected_media_schema_runtime_host_integration_unchanged": true,
+    "three_real_enabled_native_scripts": true,
+    "embedded_status_script_matches_dist": true,
+    "all_nine_components_present": true,
+    "three_real_enabled_regexes": true,
+    "hormone_contract_and_short_post_history_present": true,
+    "sealed_192_entries_and_lights_unchanged": true,
+    "sealed_book_metadata_unchanged": true,
+    "final_197_is_192_lore_plus_5_integration_entries": true,
+    "png_ccv3_and_chara_match_final_json_bytes": true,
+    "protected_source_diff_empty": true,
+    "no_timer_refresh_or_second_state_system": true
+  },
+  "json_sha256": "3659e6c20046fb5216213dd11cf34ce2cf1eb9c7081f16dd0fb5abcd98760f21",
+  "png_sha256": "fc3a3280eb08dfae9f02b7c85fd28a1c60bb15260e768f1dc06f691f56305d8c",
+  "protected_git_objects": {
+    "worldbook": "afa921ad1e83303a9527623ce02d85c51360486b",
+    "dist": "51a972e4f440029373839476351d818bcf96fba4",
+    "scripts/build_worldbook.py": "fb3c7f7d3f4d86aef8170352b1cd9f6a7e8dcf6e",
+    "scripts/audit_worldbook_final.py": "1c4bc11e188209031cae5d8f28d1cc0a72f48dde",
+    "scripts/apply_worldbook_refinements.py": "083c72f542526982eaa2472eab0500e48e1c8779"
+  },
+  "real_android_sillytavern_acceptance": "pending user screenshots"
+}
