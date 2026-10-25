@@ -24,61 +24,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Normalize assembler QA and source boundaries
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-
-          p = Path('scripts/build_worldbook.py')
-          s = p.read_text(encoding='utf-8')
-          s = s.replace(
-              '    if len([e for e in entries if str(e.get("comment", "")).startswith(("主要角色:", "其他角色:"))]) != 92:\n        raise RuntimeError("character count != 92")\n',
-              '    if len(patched_chars) != 92 or set(patched_chars) != expected_ids:\n        raise RuntimeError("character source-id coverage != 92")\n'
-          )
-          s = s.replace(
-              '    for e in entries:\n        if str(e.get("comment", "")).startswith(("主要角色:", "其他角色:")):\n            if "兽化特征:" not in e.get("content", ""):\n                raise RuntimeError(f"character lacks beast module: {e[\'comment\']}")\n',
-              '    for sid, e in patched_chars.items():\n        if "兽化特征:" not in e.get("content", ""):\n            raise RuntimeError(f"character lacks beast module: source_id={sid} comment={e.get(\'comment\')}")\n'
-          )
-          s = s.replace(
-              '    status_content = find_default_status(base_entries)\n',
-              '    status_content = replace_single_aliases(replace_names(find_default_status(base_entries), name_map))\n'
-          )
-          s = s.replace(
-              '    leaked = [name for name in changed_formal_names if name in runtime_blob]\n    if leaked:\n        raise RuntimeError("old formal names leaked: " + ", ".join(leaked))\n',
-              '''    leaked = []\n    leak_context = []\n    for name in changed_formal_names:\n        new_name = name_map.get(name, "")\n        probe = runtime_blob.replace(new_name, "") if new_name else runtime_blob\n        if name in probe:\n            leaked.append(name)\n            idx = probe.find(name)\n            leak_context.append(probe[max(0, idx-80):idx+120].replace("\\n", " "))\n    if leaked:\n        raise RuntimeError("old formal names leaked: " + ", ".join(leaked) + " | contexts: " + " || ".join(leak_context))\n'''
-          )
-          old_terms = '        terms = [x.strip() for x in (km.group(1).split("|") if km else [title]) if x.strip()]\n        result[title] = {"content": content, "terms": terms}\n'
-          new_terms = '''        terms = [x.strip() for x in (km.group(1).split("|") if km else [title]) if x.strip()]\n        # settings/08 final trigger anti-explosion rules override broad candidates.\n        if title == "八门遁甲":\n            terms = [x for x in terms if x != "开门"]\n        if title == "轮回眼":\n            terms = [x for x in terms if x != "外道"]\n        result[title] = {"content": content, "terms": terms}\n'''
-          s = s.replace(old_terms, new_terms)
-          guard_anchor = '    if len(core_setting_entries) < 20:\n        raise RuntimeError("core settings unexpectedly small")\n'
-          guard_new = '''    if len(core_setting_entries) < 20:\n        raise RuntimeError("core settings unexpectedly small")\n\n    broad_trigger_hits = []\n    for e in core_setting_entries:\n        for key in e.get("keys", []):\n            if e.get("comment") == "技能:八门遁甲" and ("|开门|" in key or "(?:开门|" in key or "|开门)" in key):\n                broad_trigger_hits.append("八门遁甲:开门")\n            if e.get("comment") == "技能:轮回眼" and ("|外道|" in key or "(?:外道|" in key or "|外道)" in key):\n                broad_trigger_hits.append("轮回眼:外道")\n    if broad_trigger_hits:\n        raise RuntimeError("broad trigger regression: " + ", ".join(broad_trigger_hits))\n'''
-          s = s.replace(guard_anchor, guard_new)
-          qa_anchor = '        "- PASS：开放性话题池采用当前仓库正式版本，不额外添加世界观业务规则。",\n'
-          qa_new = qa_anchor + '        "- PASS：宽泛触发词防爆：八门不使用裸开门，轮回眼不使用裸外道。",\n'
-          s = s.replace(qa_anchor, qa_new)
-          p.write_text(s, encoding='utf-8')
-
-          combat = Path('worldbook/settings/12_火影姬战斗思维链_v1.0.md')
-          c = combat.read_text(encoding='utf-8')
-          c = c.replace('3. 未成年人相关场景只使用普通忍术、训练、医疗、装备维护与非性化生理负荷；任何成人亲密或成人忍具用途只允许在参与角色均明确成年时出现。\n', '')
-          c = c.replace('4. 最终装配时本条位于', '3. 最终装配时本条位于')
-          combat.write_text(c, encoding='utf-8')
-          PY
       - name: Assemble and audit worldbook
         run: python scripts/build_worldbook.py
-      - name: Commit generated worldbook
+      - name: Commit generated worldbook if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add scripts/build_worldbook.py \
-                  worldbook/settings/12_火影姬战斗思维链_v1.0.md \
-                  dist/火影姬世界_完整世界书_v1.0.json \
+          git add dist/火影姬世界_完整世界书_v1.0.json \
                   dist/火影姬世界_worldbook-ready_v1.0.json \
                   dist/火影姬世界_世界书条目清单_v1.0.json \
                   qa/最终世界书自动组装审计_v1.0.md
           if git diff --cached --quiet; then
-            echo "No generated changes."
+            echo "Worldbook is reproducible and up to date."
           else
-            git commit -m "build: assemble complete worldbook v1.0"
+            git commit -m "build: refresh complete worldbook v1.0"
             git push
           fi
