@@ -302,6 +302,11 @@ def parse_skill_entries() -> Dict[str, dict]:
     for title, content in blocks.items():
         km = re.search(r"【未来绿灯关键词】\s*\n`([^`]+)`", content)
         terms = [x.strip() for x in (km.group(1).split("|") if km else [title]) if x.strip()]
+        # settings/08 final trigger anti-explosion rules override broad candidates.
+        if title == "八门遁甲":
+            terms = [x for x in terms if x != "开门"]
+        if title == "轮回眼":
+            terms = [x for x in terms if x != "外道"]
         result[title] = {"content": content, "terms": terms}
 
     s11 = read_text(SET_DIR / "11_忍阶实力阈值与瞳术进化补遗_v1.1.md")
@@ -716,6 +721,16 @@ def build() -> Tuple[dict, dict, str]:
     if len(core_setting_entries) < 20:
         raise RuntimeError("core settings unexpectedly small")
 
+    broad_trigger_hits = []
+    for e in core_setting_entries:
+        for key in e.get("keys", []):
+            if e.get("comment") == "技能:八门遁甲" and ("|开门|" in key or "(?:开门|" in key or "|开门)" in key):
+                broad_trigger_hits.append("八门遁甲:开门")
+            if e.get("comment") == "技能:轮回眼" and ("|外道|" in key or "(?:外道|" in key or "|外道)" in key):
+                broad_trigger_hits.append("轮回眼:外道")
+    if broad_trigger_hits:
+        raise RuntimeError("broad trigger regression: " + ", ".join(broad_trigger_hits))
+
     for sid, e in patched_chars.items():
         if "兽化特征:" not in e.get("content", ""):
             raise RuntimeError(f"character lacks beast module: source_id={sid} comment={e.get('comment')}")
@@ -784,6 +799,7 @@ def build() -> Tuple[dict, dict, str]:
         "- PASS：全库映射中发生改名的旧正式姓名在最终运行时条目中无残留。",
         "- PASS：龙珠 / JOJO / 幻想杀手 / 草薙流古武术 / 二阶堂红丸未进入最终运行时。",
         "- PASS：开放性话题池采用当前仓库正式版本，不额外添加世界观业务规则。",
+        "- PASS：宽泛触发词防爆：八门不使用裸开门，轮回眼不使用裸外道。",
         "",
         "## 产物",
         "- `dist/火影姬世界_完整世界书_v1.0.json`：独立 character_book 对象。",
