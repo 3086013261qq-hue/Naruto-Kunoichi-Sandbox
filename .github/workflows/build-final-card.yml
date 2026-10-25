@@ -38,11 +38,19 @@ jobs:
       - name: Assemble final card JSON
         run: python3 scripts/build_final_card.py
 
-      - name: Upload final JSON and QA
+      - name: Package importable Candidate2 PNG without changing cover
+        run: python3 scripts/package_candidate_png.py
+
+      - name: Inspect actual Candidate2 JSON and PNG integration
+        run: python3 modules/hormone-ledger/qa/candidate2-integration.py
+
+      - name: Upload Candidate2 JSON, PNG and QA
         uses: actions/upload-artifact@v4
         with:
-          name: fire-kunoichi-final-json
+          name: fire-kunoichi-candidate2
           if-no-files-found: error
           path: |
-            release/火影姬世界_正式实机测试_v1.0.json
-            release/火影姬世界_正式实机测试_v1.0_QA.json
+            release/火影姬世界_Candidate2_v1.0.json
+            release/火影姬世界_Candidate2_v1.0.png
+            release/火影姬世界_Candidate2_v1.0_QA.json
+            release/火影姬世界_Candidate2_v1.0_PNG_QA.json

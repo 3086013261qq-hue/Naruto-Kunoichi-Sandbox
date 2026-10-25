@@ -10,7 +10,7 @@
 
 酒馆助手角色脚本入口为 `dist/hormone-ledger.js` 的完整内容。使用 `getLastMessageId / getChatMessages / getVariables / replaceVariables / eventOn / tavern_events`；消息的 `is_user` 或 `role` 均兼容，并排除系统消息。只把两个 Record 写到最新正常 assistant 消息的 `stat_data`，保留原有变量外壳；不得与第二个模型更新器同时写这两个字段。
 
-面板保持单实例，挂在最新正常 assistant 的 `.mes_text` 底部；事件只迁移原节点。监听完成渲染、编辑、swipe、删除、换聊天事件。串行队列与版本令牌取消陈旧异步工作；无定时器、二刷或轮询。脚本停用清理监听器和面板。开场标记楼层不挂；普通 0 楼如有正常快照允许挂，依本项目每正常回复契约执行。
+面板保持单实例，挂在最新正常 assistant 的 `.mes_text` 底部；事件只迁移原节点。监听完成渲染、编辑、swipe、删除、换聊天事件。串行队列与版本令牌取消陈旧异步工作；无定时器、二刷或轮询。脚本停用清理监听器和面板。尚无正常回复时，开场楼层只挂现有空画廊，既不解析开场事实也不建角色档案。MutationObserver 只负责楼层DOM迟到或重绘后的原节点挂回，不重放、不解析正文、不补算数值。普通 0 楼如有正常快照允许挂，依本项目每正常回复契约执行。
 
 ## 原生结构与待组装
 
@@ -27,3 +27,5 @@
 ## 验证
 
 运行 `python3 modules/hormone-ledger/build.py`，在模块目录运行 `npm test`、`node qa/browser.cjs`、`python3 qa/media.py`。浏览器测试需要环境提供 Playwright 与 Chromium，不新增运行时依赖。QA 报告区分自动化模拟与真实 Android/SillyTavern 待验收；未宣称最终集成或手机实机已通过。
+
+Candidate2集成返工见 `qa/QA_CANDIDATE2.md`。最终卡生成使用现有 `scripts/build_final_card.py`，随后 `scripts/package_candidate_png.py` 只替换PNG元数据。最终卡保留封版192条lore及其灯态，额外追加5条MVU接线条目；模块本身仍不是另一份世界书。

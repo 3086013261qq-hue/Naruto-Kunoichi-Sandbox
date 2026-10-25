@@ -13,10 +13,13 @@
   "worldbook_fragments": {
     "常驻蓝灯输出规则": "worldbook-rule-fragment.md",
     "变量列表": "variable-list-fragment.txt",
-    "[initvar]变量初始化勿开": "initvar-fragment.yaml"
+    "[initvar]变量初始化勿开": "initvar-fragment.yaml",
+    "[mvu_update]变量更新规则": "variable-update-rule-fragment.yaml",
+    "[mvu_update]变量输出格式": "variable-output-format-fragment.yaml"
   },
   "post_history_instructions": "post-history-fragment.txt",
   "display_only_regex": "../dist/regex.json",
+  "native_cleanup_regexes": "regex-cleanup-fragment.json",
   "installation": "Assembler imports file content, not these relative paths. Do not run a second model/JSONPatch writer for the two records. No installation is performed by this module.",
   "media_commit": "b4b11c5efbbc99e1b7d92d79f32b937cfabd2f27",
   "native_reference": "咩咩制卡·全栈_v1.0.0 / MVU/骨架",

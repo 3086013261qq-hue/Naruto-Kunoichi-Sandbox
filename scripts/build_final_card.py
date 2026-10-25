@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "dist" / "火影姬世界_worldbook-ready_v1.0.json"
 MOD = ROOT / "modules" / "hormone-ledger"
 OUT_DIR = ROOT / "release"
-OUT_JSON = OUT_DIR / "火影姬世界_正式实机测试_v1.0.json"
-OUT_QA = OUT_DIR / "火影姬世界_正式实机测试_v1.0_QA.json"
+OUT_JSON = OUT_DIR / "火影姬世界_Candidate2_v1.0.json"
+OUT_QA = OUT_DIR / "火影姬世界_Candidate2_v1.0_QA.json"
 
 
 def load_json(path: Path):
@@ -106,6 +106,8 @@ def main():
     book = data.setdefault("character_book", {}).setdefault("entries", [])
     original_entries = copy.deepcopy(book)
     original_count = len(book)
+    if original_count != 192:
+        raise SystemExit("expected sealed 192-entry worldbook; refusing lore rebuild")
 
     integration = load_json(MOD / "integration" / "integration-manifest.json")
     if integration.get("status") != "fragments-only-not-installed":
@@ -119,6 +121,9 @@ def main():
     initvar = (MOD / "integration" / "initvar-fragment.yaml").read_text(encoding="utf-8")
     post_history = (MOD / "integration" / "post-history-fragment.txt").read_text(encoding="utf-8").strip()
     hormone_regex = load_json(MOD / "dist" / "regex.json")
+    cleanup_regexes = load_json(MOD / "integration" / "regex-cleanup-fragment.json")
+    update_rule = (MOD / "integration" / "variable-update-rule-fragment.yaml").read_text(encoding="utf-8")
+    output_format = (MOD / "integration" / "variable-output-format-fragment.yaml").read_text(encoding="utf-8")
 
     data["name"] = "火影姬世界"
     data["description"] = "《火影忍者》全员姬化沙盒 · 荷尔蒙档案 MVU"
@@ -127,8 +132,7 @@ def main():
     data["creator_notes"] = (data.get("creator_notes", "") + "\n\n火影姬世界 v1.0.0：以封版 worldbook-ready v1.0 为正文基线，仅装配独立 hormone-ledger MVU、强制 <hormone> 快照契约与显示正则；世界书既有正文不改。媒体由固定 GitHub/jsDelivr 清单云加载。真实 Android/SillyTavern 以本 PNG 导入验收为准。").strip()
     tags = list(dict.fromkeys((data.get("tags") or []) + ["火影姬世界", "咩咩制卡·全栈1.0.0", "MVU", "荷尔蒙档案"]))
     data["tags"] = tags
-    if isinstance(data.get("character_book"), dict):
-        data["character_book"]["name"] = "火影姬世界"
+    # Preserve the sealed book's name, entries, order and light states verbatim.
 
     for k in ("name", "description", "personality", "scenario", "first_mes", "mes_example", "creator_notes"):
         if k in card:
@@ -145,6 +149,9 @@ def main():
     regexes = ext.setdefault("regex_scripts", [])
     regexes[:] = [r for r in regexes if r.get("scriptName") != hormone_regex.get("scriptName") and r.get("id") != hormone_regex.get("id")]
     regexes.append(hormone_regex)
+    for regex in cleanup_regexes:
+        regexes[:] = [r for r in regexes if r.get("id") != regex["id"]]
+        regexes.append(regex)
 
     old_phi = (data.get("post_history_instructions") or "").strip()
     data["post_history_instructions"] = (old_phi + ("\n\n" if old_phi else "") + post_history).strip()
@@ -154,6 +161,8 @@ def main():
         wb_entry(max_id + 1, "核心规则:火影姬·每回合荷尔蒙记录强制输出", rule_md, 549, True, "after_char"),
         wb_entry(max_id + 2, "变量列表", var_list, 900, True, "at_depth"),
         wb_entry(max_id + 3, "[initvar]变量初始化勿开", initvar, 899, False, "after_char"),
+        wb_entry(max_id + 4, "[mvu_update]变量输出格式", output_format, 901, True, "at_depth"),
+        wb_entry(max_id + 5, "[mvu_update]变量更新规则", update_rule, 902, True, "at_depth"),
     ]
     for e in entries_to_add:
         upsert_by_comment(book, e)
@@ -165,20 +174,29 @@ def main():
         "对明确成年角色" in (e.get("content") or "") and "对未成年角色不使用乳腺/性化反馈" in (e.get("content") or "")
         for e in original_entries
     )
-    lock_dir = ROOT / "media" / "mvu" / "lockscreen"
-    lock_pages = sorted([p for p in lock_dir.rglob("*") if p.is_file() and p.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif"}]) if lock_dir.exists() else []
+    lock_manifest = load_json(ROOT / "media" / "mvu" / "lockscreen" / "manifest.json")
+    lock_pages = [ROOT / p for b in lock_manifest["books"] for p in b["pages"]]
     checks = {
         "spec_is_ccv3": card.get("spec") == "chara_card_v3" and card.get("spec_version") == "3.0",
         "worldbook_original_entries_byte_semantics_unchanged": original_unchanged,
-        "worldbook_entry_count_expected": len(book) == original_count + 3,
+        "worldbook_entry_count_expected": len(book) == original_count + 5,
+        "sealed_book_name_preserved": data["character_book"]["name"] == "火影姬世界书",
         "adult_gate_preserved_from_existing_worldbook": adult_gate,
         "mvu_scripts_exact_three_present": all(n in script_names for n in ["MVU", "MVU ZOD", "变量状态栏"]),
+        "mvu_scripts_enabled_and_native": all(
+            len([s for s in scripts if s.get("name") == n and s.get("enabled") is True and
+                 s.get("type") == "script" and s.get("content", "").strip()]) == 1
+            for n in ["MVU", "MVU ZOD", "变量状态栏"]
+        ),
+        "native_variable_update_rule_present": "[mvu_update]变量更新规则" in comments,
+        "native_variable_output_format_present": "[mvu_update]变量输出格式" in comments,
         "schema_exact_two_records": "角色荷尔蒙" in zod_js and "角色活体铠甲" in zod_js and "z.record" in zod_js,
         "hormone_rule_present": "核心规则:火影姬·每回合荷尔蒙记录强制输出" in comments,
         "variable_list_present": "变量列表" in comments,
         "initvar_present_disabled": any(e.get("comment") == "[initvar]变量初始化勿开" and not e.get("enabled") for e in book),
         "post_history_has_single_block_contract": "必须输出一个完整的 <hormone>...</hormone>" in data.get("post_history_instructions", ""),
         "display_regex_present": any(r.get("scriptName") == "♡ 荷尔蒙记录 · 本回合" for r in regexes),
+        "native_cleanup_regexes_enabled": all(any(r.get("id") == x["id"] and r.get("disabled") is False for r in regexes) for x in cleanup_regexes),
         "no_polling_in_statusbar": all(x not in status_js for x in ["setInterval(", "setTimeout("]),
         "lockscreen_has_61_pages": len(lock_pages) == 61,
         "module_media_commit_pinned": integration.get("media_commit") == "b4b11c5efbbc99e1b7d92d79f32b937cfabd2f27",

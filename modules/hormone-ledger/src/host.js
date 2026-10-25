@@ -1,4 +1,4 @@
-import { replay } from './runtime.js';
+import { replay, isAssistant } from './runtime.js';
 import { createUI } from './ui.js';
 
 // Tavern Helper role script entry. No DOM scraping, polling or delayed second pass.
@@ -9,6 +9,16 @@ export function mount(api = globalThis, win = window.parent) {
   let disposed = false, revision = 0, queue = Promise.resolve();
   const listeners = [];
   const diagnostics = [];
+  let anchorId = null;
+  // Mount readiness only: never read facts from DOM or trigger another replay.
+  function attach() {
+    if (disposed || anchorId == null) { ui.host.remove(); return; }
+    const box = document.querySelector(`#chat > .mes[mesid="${Number(anchorId)}"] .mes_text`);
+    if (box && ui.host.parentNode !== box) box.append(ui.host);
+    else if (!box) ui.host.remove();
+  }
+  const observer = new win.MutationObserver(attach);
+  observer.observe(document.body, { childList: true, subtree: true });
   async function refresh(ticket) {
     const last = api.getLastMessageId();
     const messages = last < 0 ? [] : await api.getChatMessages(`0-${last}`);
@@ -17,11 +27,13 @@ export function mount(api = globalThis, win = window.parent) {
     diagnostics.splice(0, diagnostics.length, ...result.diagnostics);
     for (const item of diagnostics) console.warn('[hormone-ledger]', item);
     const latest = result.latest;
-    if (latest == null) { ui.host.remove(); return; }
-    const box = document.querySelector(`#chat > .mes[mesid="${Number(latest)}"] .mes_text`);
-    if (!box) { ui.host.remove(); return; }
-    box.append(ui.host); // Move the one instance; never copy per-message panels.
+    // Opening may host the empty gallery, but never contributes business facts.
+    const openingIndex = messages.findLastIndex(isAssistant);
+    anchorId = latest ?? (openingIndex < 0 ? null :
+      messages[openingIndex].message_id ?? messages[openingIndex].id ?? openingIndex);
+    attach(); // Move the one instance; never copy per-message panels.
     ui.render(result.state);
+    if (latest == null) return;
     // Native message variable envelope. Raw hormone remains the only fact source.
     const scope = { type: 'message', message_id: latest };
     const envelope = await api.getVariables(scope);
@@ -45,6 +57,7 @@ export function mount(api = globalThis, win = window.parent) {
   }
   const stop = () => {
     disposed = true; ++revision;
+    observer.disconnect();
     listeners.forEach(listener => listener?.stop?.());
     ui.destroy();
     api.removeEventListener?.('pagehide', stop);
