@@ -1,0 +1,25 @@
+{
+  "baseline": "ccd8162982e0eb23453da58a5925d6ac5ad57676",
+  "protected": {
+    "worldbook": {
+      "baseline_object": "78844f8617a46ba02d0e6598c32020748b178465",
+      "current_object": "78844f8617a46ba02d0e6598c32020748b178465"
+    },
+    "dist": {
+      "baseline_object": "641dfaa65b3ed9ebe547f3811a5ec1d99a2c03c7",
+      "current_object": "641dfaa65b3ed9ebe547f3811a5ec1d99a2c03c7"
+    },
+    "scripts/build_worldbook.py": {
+      "baseline_object": "fb3c7f7d3f4d86aef8170352b1cd9f6a7e8dcf6e",
+      "current_object": "fb3c7f7d3f4d86aef8170352b1cd9f6a7e8dcf6e"
+    },
+    "scripts/audit_worldbook_final.py": {
+      "baseline_object": "1c4bc11e188209031cae5d8f28d1cc0a72f48dde",
+      "current_object": "1c4bc11e188209031cae5d8f28d1cc0a72f48dde"
+    }
+  },
+  "protected_diff": "",
+  "scope": "All created and changed files must start modules/hormone-ledger/",
+  "worldbook_build_executed": false,
+  "final_character_cards_created": false
+}

@@ -1,0 +1,99 @@
+{
+  "engine": "Chromium mobile emulation; local pinned-media mirror; background intentionally blocked",
+  "results": [
+    {
+      "width": 320,
+      "result": "PASS",
+      "layout": {
+        "width": 304,
+        "scroll": 304,
+        "documentOverflow": false,
+        "listOverflow": false,
+        "tracks": [
+          {
+            "value": "0",
+            "width": 0,
+            "full": 246
+          },
+          {
+            "value": "100",
+            "width": 246,
+            "full": 246
+          }
+        ],
+        "background": "linear-gradient(rgba(15, 13, 17, 0.78), rgba(10, 9, 12, 0.92)), url(\"https://cdn.jsdelivr.net/gh/3086013261qq-hue/Naruto-Kunoichi-Sandbox@b4b11c5efbbc99e1b7d92d79f32b937cfabd2f27/media/mvu/142996460_p0_master1200.webp\"), linear-gradient(160deg, rgb(23, 21, 26), rgb(16, 16, 20))"
+      }
+    },
+    {
+      "width": 360,
+      "result": "PASS",
+      "layout": {
+        "width": 344,
+        "scroll": 344,
+        "documentOverflow": false,
+        "listOverflow": false,
+        "tracks": [
+          {
+            "value": "0",
+            "width": 0,
+            "full": 286
+          },
+          {
+            "value": "100",
+            "width": 286,
+            "full": 286
+          }
+        ],
+        "background": "linear-gradient(rgba(15, 13, 17, 0.78), rgba(10, 9, 12, 0.92)), url(\"https://cdn.jsdelivr.net/gh/3086013261qq-hue/Naruto-Kunoichi-Sandbox@b4b11c5efbbc99e1b7d92d79f32b937cfabd2f27/media/mvu/142996460_p0_master1200.webp\"), linear-gradient(160deg, rgb(23, 21, 26), rgb(16, 16, 20))"
+      }
+    },
+    {
+      "width": 390,
+      "result": "PASS",
+      "layout": {
+        "width": 374,
+        "scroll": 374,
+        "documentOverflow": false,
+        "listOverflow": false,
+        "tracks": [
+          {
+            "value": "0",
+            "width": 0,
+            "full": 316
+          },
+          {
+            "value": "100",
+            "width": 316,
+            "full": 316
+          }
+        ],
+        "background": "linear-gradient(rgba(15, 13, 17, 0.78), rgba(10, 9, 12, 0.92)), url(\"https://cdn.jsdelivr.net/gh/3086013261qq-hue/Naruto-Kunoichi-Sandbox@b4b11c5efbbc99e1b7d92d79f32b937cfabd2f27/media/mvu/142996460_p0_master1200.webp\"), linear-gradient(160deg, rgb(23, 21, 26), rgb(16, 16, 20))"
+      }
+    },
+    {
+      "width": 440,
+      "result": "PASS",
+      "layout": {
+        "width": 424,
+        "scroll": 424,
+        "documentOverflow": false,
+        "listOverflow": false,
+        "tracks": [
+          {
+            "value": "0",
+            "width": 0,
+            "full": 366
+          },
+          {
+            "value": "100",
+            "width": 366,
+            "full": 366
+          }
+        ],
+        "background": "linear-gradient(rgba(15, 13, 17, 0.78), rgba(10, 9, 12, 0.92)), url(\"https://cdn.jsdelivr.net/gh/3086013261qq-hue/Naruto-Kunoichi-Sandbox@b4b11c5efbbc99e1b7d92d79f32b937cfabd2f27/media/mvu/142996460_p0_master1200.webp\"), linear-gradient(160deg, rgb(23, 21, 26), rgb(16, 16, 20))"
+      }
+    }
+  ],
+  "gallery": "61/61 decoded at each width, 28→29 boundary, <=3 residents, remembered page, swipe/tap separated",
+  "host": "raw message events, missing block inheritance, one instance, selected swipe, deletes, chat reset, teardown"
+}
