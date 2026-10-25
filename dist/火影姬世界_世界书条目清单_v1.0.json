@@ -340,6 +340,58 @@
   {
     "index": 26,
     "id": 26,
+    "comment": "核心规则:兽耳兽尾与御姐化",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 438,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 27,
+    "id": 27,
+    "comment": "核心规则:查克拉体态再塑",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 437,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 28,
+    "id": 28,
+    "comment": "核心规则:查克拉等级与多次再发育",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 436,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 29,
+    "id": 29,
+    "comment": "核心规则:荷尔蒙值与单回合跃迁",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 435,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 30,
+    "id": 30,
     "comment": "核心规则:火影姬开放性话题池",
     "enabled": true,
     "constant": true,
@@ -351,8 +403,8 @@
     "keys": []
   },
   {
-    "index": 27,
-    "id": 27,
+    "index": 31,
+    "id": 31,
     "comment": "【核心规则:结尾】",
     "enabled": true,
     "constant": true,
@@ -364,8 +416,8 @@
     "keys": []
   },
   {
-    "index": 28,
-    "id": 28,
+    "index": 32,
+    "id": 32,
     "comment": "【核心设定:起始】",
     "enabled": true,
     "constant": true,
@@ -377,8 +429,8 @@
     "keys": []
   },
   {
-    "index": 29,
-    "id": 29,
+    "index": 33,
+    "id": 33,
     "comment": "技能:仙人模式",
     "enabled": true,
     "constant": false,
@@ -392,8 +444,8 @@
     ]
   },
   {
-    "index": 30,
-    "id": 30,
+    "index": 34,
+    "id": 34,
     "comment": "技能:八门遁甲",
     "enabled": true,
     "constant": false,
@@ -407,8 +459,8 @@
     ]
   },
   {
-    "index": 31,
-    "id": 31,
+    "index": 35,
+    "id": 35,
     "comment": "技能:写轮眼",
     "enabled": true,
     "constant": false,
@@ -422,8 +474,8 @@
     ]
   },
   {
-    "index": 32,
-    "id": 32,
+    "index": 36,
+    "id": 36,
     "comment": "技能:医疗忍术",
     "enabled": true,
     "constant": false,
@@ -437,8 +489,8 @@
     ]
   },
   {
-    "index": 33,
-    "id": 33,
+    "index": 37,
+    "id": 37,
     "comment": "技能:咒印",
     "enabled": true,
     "constant": false,
@@ -452,8 +504,8 @@
     ]
   },
   {
-    "index": 34,
-    "id": 34,
+    "index": 38,
+    "id": 38,
     "comment": "技能:土遁",
     "enabled": true,
     "constant": false,
@@ -467,8 +519,8 @@
     ]
   },
   {
-    "index": 35,
-    "id": 35,
+    "index": 39,
+    "id": 39,
     "comment": "技能:封印术",
     "enabled": true,
     "constant": false,
@@ -482,8 +534,8 @@
     ]
   },
   {
-    "index": 36,
-    "id": 36,
+    "index": 40,
+    "id": 40,
     "comment": "技能:尾兽",
     "enabled": true,
     "constant": false,
@@ -497,8 +549,8 @@
     ]
   },
   {
-    "index": 37,
-    "id": 37,
+    "index": 41,
+    "id": 41,
     "comment": "技能:幻术",
     "enabled": true,
     "constant": false,
@@ -512,8 +564,8 @@
     ]
   },
   {
-    "index": 38,
-    "id": 38,
+    "index": 42,
+    "id": 42,
     "comment": "技能:木遁",
     "enabled": true,
     "constant": false,
@@ -527,8 +579,8 @@
     ]
   },
   {
-    "index": 39,
-    "id": 39,
+    "index": 43,
+    "id": 43,
     "comment": "技能:水遁",
     "enabled": true,
     "constant": false,
@@ -542,8 +594,8 @@
     ]
   },
   {
-    "index": 40,
-    "id": 40,
+    "index": 44,
+    "id": 44,
     "comment": "技能:火遁",
     "enabled": true,
     "constant": false,
@@ -557,8 +609,8 @@
     ]
   },
   {
-    "index": 41,
-    "id": 41,
+    "index": 45,
+    "id": 45,
     "comment": "技能:白眼",
     "enabled": true,
     "constant": false,
@@ -572,8 +624,8 @@
     ]
   },
   {
-    "index": 42,
-    "id": 42,
+    "index": 46,
+    "id": 46,
     "comment": "技能:秘传与特殊流派",
     "enabled": true,
     "constant": false,
@@ -587,8 +639,8 @@
     ]
   },
   {
-    "index": 43,
-    "id": 43,
+    "index": 47,
+    "id": 47,
     "comment": "技能:血继限界",
     "enabled": true,
     "constant": false,
@@ -602,8 +654,8 @@
     ]
   },
   {
-    "index": 44,
-    "id": 44,
+    "index": 48,
+    "id": 48,
     "comment": "技能:轮回眼",
     "enabled": true,
     "constant": false,
@@ -617,8 +669,8 @@
     ]
   },
   {
-    "index": 45,
-    "id": 45,
+    "index": 49,
+    "id": 49,
     "comment": "技能:通灵之术",
     "enabled": true,
     "constant": false,
@@ -632,8 +684,8 @@
     ]
   },
   {
-    "index": 46,
-    "id": 46,
+    "index": 50,
+    "id": 50,
     "comment": "技能:雷遁",
     "enabled": true,
     "constant": false,
@@ -647,8 +699,8 @@
     ]
   },
   {
-    "index": 47,
-    "id": 47,
+    "index": 51,
+    "id": 51,
     "comment": "技能:风遁",
     "enabled": true,
     "constant": false,
@@ -662,8 +714,8 @@
     ]
   },
   {
-    "index": 48,
-    "id": 48,
+    "index": 52,
+    "id": 52,
     "comment": "核心设定:一尾守鹤活体铠甲",
     "enabled": true,
     "constant": false,
@@ -677,8 +729,8 @@
     ]
   },
   {
-    "index": 49,
-    "id": 49,
+    "index": 53,
+    "id": 53,
     "comment": "核心设定:七尾重明活体铠甲",
     "enabled": true,
     "constant": false,
@@ -692,8 +744,8 @@
     ]
   },
   {
-    "index": 50,
-    "id": 50,
+    "index": 54,
+    "id": 54,
     "comment": "核心设定:三尾矶抚活体铠甲",
     "enabled": true,
     "constant": false,
@@ -707,8 +759,8 @@
     ]
   },
   {
-    "index": 51,
-    "id": 51,
+    "index": 55,
+    "id": 55,
     "comment": "核心设定:九尾九喇嘛活体铠甲",
     "enabled": true,
     "constant": false,
@@ -722,8 +774,8 @@
     ]
   },
   {
-    "index": 52,
-    "id": 52,
+    "index": 56,
+    "id": 56,
     "comment": "核心设定:二代水影大蛤蜊活体铠甲",
     "enabled": true,
     "constant": false,
@@ -737,8 +789,8 @@
     ]
   },
   {
-    "index": 53,
-    "id": 53,
+    "index": 57,
+    "id": 57,
     "comment": "核心设定:二尾又旅活体铠甲",
     "enabled": true,
     "constant": false,
@@ -752,8 +804,8 @@
     ]
   },
   {
-    "index": 54,
-    "id": 54,
+    "index": 58,
+    "id": 58,
     "comment": "核心设定:五尾穆王活体铠甲",
     "enabled": true,
     "constant": false,
@@ -767,8 +819,8 @@
     ]
   },
   {
-    "index": 55,
-    "id": 55,
+    "index": 59,
+    "id": 59,
     "comment": "核心设定:八尾牛鬼活体铠甲",
     "enabled": true,
     "constant": false,
@@ -782,8 +834,8 @@
     ]
   },
   {
-    "index": 56,
-    "id": 56,
+    "index": 60,
+    "id": 60,
     "comment": "核心设定:六尾犀犬活体铠甲",
     "enabled": true,
     "constant": false,
@@ -797,8 +849,8 @@
     ]
   },
   {
-    "index": 57,
-    "id": 57,
+    "index": 61,
+    "id": 61,
     "comment": "核心设定:兽化生理与发情期",
     "enabled": true,
     "constant": false,
@@ -812,8 +864,8 @@
     ]
   },
   {
-    "index": 58,
-    "id": 58,
+    "index": 62,
+    "id": 62,
     "comment": "核心设定:兽种差异与周期特征",
     "enabled": true,
     "constant": false,
@@ -827,23 +879,8 @@
     ]
   },
   {
-    "index": 59,
-    "id": 59,
-    "comment": "核心设定:兽耳兽尾与御姐化",
-    "enabled": true,
-    "constant": false,
-    "selective": true,
-    "position": "after_char",
-    "depth": 4,
-    "order": 369,
-    "use_regex": true,
-    "keys": [
-      "/<story_scene>.*?(?:兽耳|兽尾|兽化|御姐化).*?<\\/story_scene>/s"
-    ]
-  },
-  {
-    "index": 60,
-    "id": 60,
+    "index": 63,
+    "id": 63,
     "comment": "核心设定:刺激训练与性刺激训练",
     "enabled": true,
     "constant": false,
@@ -857,8 +894,8 @@
     ]
   },
   {
-    "index": 61,
-    "id": 61,
+    "index": 64,
+    "id": 64,
     "comment": "核心设定:发情期三阶段",
     "enabled": true,
     "constant": false,
@@ -872,8 +909,8 @@
     ]
   },
   {
-    "index": 62,
-    "id": 62,
+    "index": 65,
+    "id": 65,
     "comment": "核心设定:发情期扶她化",
     "enabled": true,
     "constant": false,
@@ -887,8 +924,8 @@
     ]
   },
   {
-    "index": 63,
-    "id": 63,
+    "index": 66,
+    "id": 66,
     "comment": "核心设定:四尾孙悟空活体铠甲",
     "enabled": true,
     "constant": false,
@@ -902,8 +939,8 @@
     ]
   },
   {
-    "index": 64,
-    "id": 64,
+    "index": 67,
+    "id": 67,
     "comment": "核心设定:妙木山蛤蟆活体铠甲",
     "enabled": true,
     "constant": false,
@@ -917,8 +954,8 @@
     ]
   },
   {
-    "index": 65,
-    "id": 65,
+    "index": 68,
+    "id": 68,
     "comment": "核心设定:山椒鱼井伏活体铠甲",
     "enabled": true,
     "constant": false,
@@ -932,8 +969,8 @@
     ]
   },
   {
-    "index": 66,
-    "id": 66,
+    "index": 69,
+    "id": 69,
     "comment": "核心设定:忍村荷尔蒙查克拉训练流派",
     "enabled": true,
     "constant": false,
@@ -947,8 +984,8 @@
     ]
   },
   {
-    "index": 67,
-    "id": 67,
+    "index": 70,
+    "id": 70,
     "comment": "核心设定:忍者学校",
     "enabled": true,
     "constant": false,
@@ -962,8 +999,8 @@
     ]
   },
   {
-    "index": 68,
-    "id": 68,
+    "index": 71,
+    "id": 71,
     "comment": "核心设定:成人玩具忍具名录",
     "enabled": true,
     "constant": false,
@@ -977,23 +1014,8 @@
     ]
   },
   {
-    "index": 69,
-    "id": 69,
-    "comment": "核心设定:查克拉体态再塑",
-    "enabled": true,
-    "constant": false,
-    "selective": true,
-    "position": "after_char",
-    "depth": 4,
-    "order": 359,
-    "use_regex": true,
-    "keys": [
-      "/<story_scene>.*?(?:体态再塑|体态重塑|再发育|第二性征).*?<\\/story_scene>/s"
-    ]
-  },
-  {
-    "index": 70,
-    "id": 70,
+    "index": 72,
+    "id": 72,
     "comment": "核心设定:查克拉提取训练",
     "enabled": true,
     "constant": false,
@@ -1007,23 +1029,8 @@
     ]
   },
   {
-    "index": 71,
-    "id": 71,
-    "comment": "核心设定:查克拉等级与多次再发育",
-    "enabled": true,
-    "constant": false,
-    "selective": true,
-    "position": "after_char",
-    "depth": 4,
-    "order": 357,
-    "use_regex": true,
-    "keys": [
-      "/<story_scene>.*?(?:多次再发育|再发育|身体阶段|实力阈值).*?<\\/story_scene>/s"
-    ]
-  },
-  {
-    "index": 72,
-    "id": 72,
+    "index": 73,
+    "id": 73,
     "comment": "核心设定:梦貘活体铠甲",
     "enabled": true,
     "constant": false,
@@ -1037,8 +1044,8 @@
     ]
   },
   {
-    "index": 73,
-    "id": 73,
+    "index": 74,
+    "id": 74,
     "comment": "核心设定:活体铠甲同步等级",
     "enabled": true,
     "constant": false,
@@ -1052,8 +1059,8 @@
     ]
   },
   {
-    "index": 74,
-    "id": 74,
+    "index": 75,
+    "id": 75,
     "comment": "核心设定:湿骨林蛞蝓活体铠甲",
     "enabled": true,
     "constant": false,
@@ -1067,8 +1074,8 @@
     ]
   },
   {
-    "index": 75,
-    "id": 75,
+    "index": 76,
+    "id": 76,
     "comment": "核心设定:猿魔活体铠甲",
     "enabled": true,
     "constant": false,
@@ -1082,8 +1089,8 @@
     ]
   },
   {
-    "index": 76,
-    "id": 76,
+    "index": 77,
+    "id": 77,
     "comment": "核心设定:等级突破与查克拉阈值",
     "enabled": true,
     "constant": false,
@@ -1094,21 +1101,6 @@
     "use_regex": true,
     "keys": [
       "/<story_scene>.*?(?:等级突破与查克拉阈值|等级突破|查克拉阈值).*?<\\/story_scene>/s"
-    ]
-  },
-  {
-    "index": 77,
-    "id": 77,
-    "comment": "核心设定:荷尔蒙值与单回合跃迁",
-    "enabled": true,
-    "constant": false,
-    "selective": true,
-    "position": "after_char",
-    "depth": 4,
-    "order": 351,
-    "use_regex": true,
-    "keys": [
-      "/<story_scene>.*?(?:荷尔蒙值与单回合跃迁|荷尔蒙值|单回合跃迁).*?<\\/story_scene>/s"
     ]
   },
   {
