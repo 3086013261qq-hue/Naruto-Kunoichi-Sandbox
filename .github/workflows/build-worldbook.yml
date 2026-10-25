@@ -47,11 +47,21 @@ jobs:
               '    leaked = [name for name in changed_formal_names if name in runtime_blob]\n    if leaked:\n        raise RuntimeError("old formal names leaked: " + ", ".join(leaked))\n',
               '''    leaked = []\n    leak_context = []\n    for name in changed_formal_names:\n        new_name = name_map.get(name, "")\n        probe = runtime_blob.replace(new_name, "") if new_name else runtime_blob\n        if name in probe:\n            leaked.append(name)\n            idx = probe.find(name)\n            leak_context.append(probe[max(0, idx-80):idx+120].replace("\\n", " "))\n    if leaked:\n        raise RuntimeError("old formal names leaked: " + ", ".join(leaked) + " | contexts: " + " || ".join(leak_context))\n'''
           )
+          old_terms = '        terms = [x.strip() for x in (km.group(1).split("|") if km else [title]) if x.strip()]\n        result[title] = {"content": content, "terms": terms}\n'
+          new_terms = '''        terms = [x.strip() for x in (km.group(1).split("|") if km else [title]) if x.strip()]\n        # settings/08 final trigger anti-explosion rules override broad candidates.\n        if title == "八门遁甲":\n            terms = [x for x in terms if x != "开门"]\n        if title == "轮回眼":\n            terms = [x for x in terms if x != "外道"]\n        result[title] = {"content": content, "terms": terms}\n'''
+          s = s.replace(old_terms, new_terms)
+          guard_anchor = '    if len(core_setting_entries) < 20:\n        raise RuntimeError("core settings unexpectedly small")\n'
+          guard_new = '''    if len(core_setting_entries) < 20:\n        raise RuntimeError("core settings unexpectedly small")\n\n    broad_trigger_hits = []\n    for e in core_setting_entries:\n        for key in e.get("keys", []):\n            if e.get("comment") == "技能:八门遁甲" and ("|开门|" in key or "(?:开门|" in key or "|开门)" in key):\n                broad_trigger_hits.append("八门遁甲:开门")\n            if e.get("comment") == "技能:轮回眼" and ("|外道|" in key or "(?:外道|" in key or "|外道)" in key):\n                broad_trigger_hits.append("轮回眼:外道")\n    if broad_trigger_hits:\n        raise RuntimeError("broad trigger regression: " + ", ".join(broad_trigger_hits))\n'''
+          s = s.replace(guard_anchor, guard_new)
+          qa_anchor = '        "- PASS：开放性话题池采用当前仓库正式版本，不额外添加世界观业务规则。",\n'
+          qa_new = qa_anchor + '        "- PASS：宽泛触发词防爆：八门不使用裸开门，轮回眼不使用裸外道。",\n'
+          s = s.replace(qa_anchor, qa_new)
           p.write_text(s, encoding='utf-8')
 
           combat = Path('worldbook/settings/12_火影姬战斗思维链_v1.0.md')
           c = combat.read_text(encoding='utf-8')
           c = c.replace('3. 未成年人相关场景只使用普通忍术、训练、医疗、装备维护与非性化生理负荷；任何成人亲密或成人忍具用途只允许在参与角色均明确成年时出现。\n', '')
+          c = c.replace('4. 最终装配时本条位于', '3. 最终装配时本条位于')
           combat.write_text(c, encoding='utf-8')
           PY
       - name: Assemble and audit worldbook
