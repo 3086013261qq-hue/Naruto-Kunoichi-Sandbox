@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": {
+    "spec_is_ccv3": true,
+    "worldbook_original_entries_byte_semantics_unchanged": true,
+    "worldbook_entry_count_expected": true,
+    "sealed_book_name_preserved": true,
+    "adult_gate_preserved_from_existing_worldbook": true,
+    "mvu_scripts_exact_three_present": true,
+    "mvu_scripts_enabled_and_native": true,
+    "native_variable_update_rule_present": true,
+    "native_variable_output_format_present": true,
+    "schema_exact_two_records": true,
+    "hormone_rule_present": true,
+    "variable_list_present": true,
+    "initvar_present_disabled": true,
+    "post_history_has_single_block_contract": true,
+    "display_regex_present": true,
+    "native_cleanup_regexes_enabled": true,
+    "no_polling_in_statusbar": true,
+    "lockscreen_has_61_pages": true,
+    "module_media_commit_pinned": true
+  },
+  "base": "dist/火影姬世界_worldbook-ready_v1.0.json",
+  "base_worldbook_entries": 192,
+  "final_worldbook_entries": 197,
+  "lockscreen_pages": 61,
+  "integration_media_commit": "b4b11c5efbbc99e1b7d92d79f32b937cfabd2f27",
+  "final_json_sha256": "3659e6c20046fb5216213dd11cf34ce2cf1eb9c7081f16dd0fb5abcd98760f21",
+  "note": "本报告是静态/自动化组装 QA；真实 Android/SillyTavern 仍需导入最终 PNG 实机验收。"
+}
