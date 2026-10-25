@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/build_worldbook.py'
+      - 'scripts/audit_worldbook_final.py'
       - 'worldbook/**'
       - '火影忍者_沙盒_纯设定基底_v0.1.json'
       - '火影忍者_沙盒_角色条目拆分备份_v0.1.json'
@@ -24,19 +25,71 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Assemble and audit worldbook
+      - name: Apply final assembly corrections
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/build_worldbook.py')
+          s = p.read_text(encoding='utf-8')
+
+          def patch(old, new, label):
+              global s
+              if old in s:
+                  s = s.replace(old, new, 1)
+                  print('patched:', label)
+              elif new in s:
+                  print('already patched:', label)
+              else:
+                  raise SystemExit('patch target missing: ' + label)
+
+          patch(
+          '''        # settings/08 final trigger anti-explosion rules override broad candidates.\n        if title == "八门遁甲":\n            terms = [x for x in terms if x != "开门"]\n        if title == "轮回眼":\n            terms = [x for x in terms if x != "外道"]\n''',
+          '''        # settings/08 final trigger anti-explosion rules override broad candidates.\n        if title == "八门遁甲":\n            terms = [\n                "八门遁甲", "第一门·开门", "第二门·休门", "第三门·生门", "第四门·伤门",\n                "第五门·杜门", "第六门·景门", "第七门·惊门", "第八门·死门",\n                "朝孔雀", "昼虎", "夕象", "夜凯",\n            ]\n        if title == "轮回眼":\n            terms = ["外道魔像" if x == "外道" else x for x in terms]\n''',
+          'skill anti-explosion terms')
+
+          patch(
+          '''            keys=[regex_key(item["terms"], wrapped_story_scene=True)],\n''',
+          '''            keys=[(\n                r"/<story_scene>.*?(?:写轮眼|万花筒写轮眼|天照|(?<!无限)月读|神威|别天神|须佐能乎|伊邪那岐|伊邪那美).*?<\\/story_scene>/s"\n                if title == "技能:写轮眼"\n                else regex_key(item["terms"], wrapped_story_scene=True)\n            )],\n''',
+          'write-eye regex')
+
+          patch(
+          '''    order = 299\n    for sid in range(51, 104):\n        e = patched_chars[sid]\n        e["insertion_order"] = order\n        entries.append(e)\n        order -= 1\n''',
+          '''    order = 202\n    for sid in range(51, 104):\n        e = patched_chars[sid]\n        e["insertion_order"] = order\n        entries.append(e)\n        order += 1\n''',
+          'main character order')
+
+          patch(
+          '''    order = 199\n    for sid in range(10, 49):\n        e = patched_chars[sid]\n        e["insertion_order"] = order\n        entries.append(e)\n        order -= 1\n''',
+          '''    order = 102\n    for sid in range(10, 49):\n        e = patched_chars[sid]\n        e["insertion_order"] = order\n        entries.append(e)\n        order += 1\n''',
+          'other character order')
+
+          patch(
+          '''    order = 99\n    for path in location_paths:\n''',
+          '''    order = 2\n    for path in location_paths:\n''',
+          'location order start')
+          patch(
+          '''        order -= 1\n    entries.append(section_marker(template, "地点:结尾", 1))\n''',
+          '''        order += 1\n    entries.append(section_marker(template, "地点:结尾", 1))\n''',
+          'location order direction')
+
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Assemble worldbook
         run: python scripts/build_worldbook.py
-      - name: Commit generated worldbook if changed
+      - name: Independent source-to-worldbook audit
+        run: python scripts/audit_worldbook_final.py
+      - name: Commit corrected worldbook and audit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist/火影姬世界_完整世界书_v1.0.json \
+          git add scripts/build_worldbook.py \
+                  dist/火影姬世界_完整世界书_v1.0.json \
                   dist/火影姬世界_worldbook-ready_v1.0.json \
                   dist/火影姬世界_世界书条目清单_v1.0.json \
-                  qa/最终世界书自动组装审计_v1.0.md
+                  qa/最终世界书自动组装审计_v1.0.md \
+                  qa/最终世界书逐源对照审计_v1.0.md
           if git diff --cached --quiet; then
-            echo "Worldbook is reproducible and up to date."
+            echo "Worldbook and independent audit are reproducible and up to date."
           else
-            git commit -m "build: refresh complete worldbook v1.0"
+            git commit -m "fix: correct final worldbook assembly after source audit"
             git push
           fi
