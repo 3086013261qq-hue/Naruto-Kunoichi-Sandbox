@@ -1,0 +1,2804 @@
+[
+  {
+    "index": 0,
+    "id": 0,
+    "comment": "🗑️清空局部变量(别关)",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "before_char",
+    "depth": 4,
+    "order": 556,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 1,
+    "id": 1,
+    "comment": "【记忆相关:起始】",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 555,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 2,
+    "id": 2,
+    "comment": "日常记忆存储",
+    "enabled": false,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 554,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 3,
+    "id": 3,
+    "comment": "重大记忆存储",
+    "enabled": false,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 553,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 4,
+    "id": 4,
+    "comment": "玩家身世背景",
+    "enabled": false,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 552,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 5,
+    "id": 5,
+    "comment": "【记忆相关:结尾】",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 551,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 6,
+    "id": 6,
+    "comment": "【输出规则:起始】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 550,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 7,
+    "id": 7,
+    "comment": "时间线-前传(多选一)",
+    "enabled": false,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 454,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 8,
+    "id": 8,
+    "comment": "时间线-第一部(多选一)",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 454,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 9,
+    "id": 9,
+    "comment": "时间线-疾风传(多选一)",
+    "enabled": false,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 454,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 10,
+    "id": 10,
+    "comment": "时间线-博乃传(多选一)",
+    "enabled": false,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 454,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 11,
+    "id": 11,
+    "comment": "战斗思维链",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "at_depth",
+    "depth": 0,
+    "order": 453,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 12,
+    "id": 12,
+    "comment": "状态栏-默认（MVU待替换）",
+    "enabled": false,
+    "constant": true,
+    "selective": false,
+    "position": "at_depth",
+    "depth": 0,
+    "order": 452,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 13,
+    "id": 13,
+    "comment": "【输出规则:结尾】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 451,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 14,
+    "id": 14,
+    "comment": "【核心规则:起始】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 450,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 15,
+    "id": 15,
+    "comment": "核心规则:火影姬世界总则",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 449,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 16,
+    "id": 16,
+    "comment": "核心规则:世界观校验/过滤",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 448,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 17,
+    "id": 17,
+    "comment": "核心规则:金钱",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 447,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 18,
+    "id": 18,
+    "comment": "核心规则:任务等级说明",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 446,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 19,
+    "id": 19,
+    "comment": "核心规则:荷尔蒙查克拉循环",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 445,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 20,
+    "id": 20,
+    "comment": "核心规则:忍术与荷尔蒙查克拉总则",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 444,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 21,
+    "id": 21,
+    "comment": "核心规则:玩具型忍具体系",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 443,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 22,
+    "id": 22,
+    "comment": "核心规则:活体铠甲基础构造",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 442,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 23,
+    "id": 23,
+    "comment": "核心规则:通灵兽与尾兽铠化",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 441,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 24,
+    "id": 24,
+    "comment": "核心规则:女女相恋社会与家庭生育总则",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 440,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 25,
+    "id": 25,
+    "comment": "核心规则:忍阶实力阈值与身份分离",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 439,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 26,
+    "id": 26,
+    "comment": "核心规则:火影姬开放性话题池",
+    "enabled": true,
+    "constant": true,
+    "selective": false,
+    "position": "after_char",
+    "depth": 4,
+    "order": 405,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 27,
+    "id": 27,
+    "comment": "【核心规则:结尾】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 401,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 28,
+    "id": 28,
+    "comment": "【核心设定:起始】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 400,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 29,
+    "id": 29,
+    "comment": "技能:仙人模式",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 399,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:仙人模式|仙术|蛙组手|妙木山仙术|龙地洞仙术|六道仙人模式|六道仙术|求道玉).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 30,
+    "id": 30,
+    "comment": "技能:八门遁甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 398,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:八门遁甲|开门|休门|生门|伤门|杜门|景门|惊门|死门|朝孔雀|昼虎|夕象|夜凯).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 31,
+    "id": 31,
+    "comment": "技能:写轮眼",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 397,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:写轮眼|万花筒写轮眼|天照|月读\\(\\?!\\[\\^<\\\\n\\]\\*无限月读\\)|神威|别天神|须佐能乎|伊邪那岐|伊邪那美).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 32,
+    "id": 32,
+    "comment": "技能:医疗忍术",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 396,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:医疗忍术|医疗术|查克拉手术刀|细患抽出|掌仙术|乱身冲|樱花冲|创造再生|百豪之术|己生转生).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 33,
+    "id": 33,
+    "comment": "技能:咒印",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 395,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:咒印|天之咒印|笼中鸟|舌祸根绝之印).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 34,
+    "id": 34,
+    "comment": "技能:土遁",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 394,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:土遁|心中斩首|土流壁|黄泉沼|轻重岩|超轻重岩).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 35,
+    "id": 35,
+    "comment": "技能:封印术",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 393,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:封印术|封印之术|指刻封印|封火法印|封邪法印|四象封印|八卦封印|金刚封锁|尸鬼封尽|幻龙九封尽).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 36,
+    "id": 36,
+    "comment": "技能:尾兽",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 392,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:尾兽|人柱力|尾兽玉|尾兽化|尾兽查克拉|十尾|神树).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 37,
+    "id": 37,
+    "comment": "技能:幻术",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 391,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:幻术|奈落见|树缚杀|梦幻音锁|气蒸楼阁|无限月读).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 38,
+    "id": 38,
+    "comment": "技能:木遁",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 390,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:木遁|默杀缚|四柱牢|木锭壁|木龙|树界降诞|花树界|木人|榜排|真数千手).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 39,
+    "id": 39,
+    "comment": "技能:水遁",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 389,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:水遁|水乱波|水龙弹|水阵壁|大鲛弹|硬涡水刃).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 40,
+    "id": 40,
+    "comment": "技能:火遁",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 388,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:火遁|豪火球|凤仙火|豪龙火|豪火灭却|豪火灭失|灰尘隐).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 41,
+    "id": 41,
+    "comment": "技能:白眼",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 387,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:白眼|柔拳|点穴|回天|八卦六十四掌|八卦空掌|兔毛针|转生眼).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 42,
+    "id": 42,
+    "comment": "技能:秘传与特殊流派",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 386,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:影子模仿术|影子秘术|倍化术|倍化之术|心转身之术|寄坏虫之术|傀儡术|飞雷神之术|飞雷神).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 43,
+    "id": 43,
+    "comment": "技能:血继限界",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 385,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:血继限界|冰遁|尸骨脉|溶遁|沸遁|岚遁|爆遁|磁遁|灼遁|晶遁|尘遁|血继淘汰).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 44,
+    "id": 44,
+    "comment": "技能:轮回眼",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 384,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:轮回眼|神罗天征|万象天引|地爆天星|修罗道|人间道|畜生道|饿鬼道|地狱道|外道|轮回天生|天手力|轮墓).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 45,
+    "id": 45,
+    "comment": "技能:通灵之术",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 383,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:通灵之术|通灵术|通灵契约|秽土转生).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 46,
+    "id": 46,
+    "comment": "技能:雷遁",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 382,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:雷遁|地走|千鸟|雷切|麒麟|雷遁铠甲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 47,
+    "id": 47,
+    "comment": "技能:风遁",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 381,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:风遁|大突破|烈风掌|大镰鼬|螺旋手里剑).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 48,
+    "id": 48,
+    "comment": "核心设定:一尾守鹤活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 380,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:一尾守鹤活体铠甲|一尾守鹤|一尾守鹤铠甲|守鹤).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 49,
+    "id": 49,
+    "comment": "核心设定:七尾重明活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 379,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:七尾重明活体铠甲|七尾重明|七尾重明铠甲|重明).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 50,
+    "id": 50,
+    "comment": "核心设定:三尾矶抚活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 378,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:三尾矶抚活体铠甲|三尾矶抚|三尾矶抚铠甲|矶抚).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 51,
+    "id": 51,
+    "comment": "核心设定:九尾九喇嘛活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 377,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:九尾九喇嘛活体铠甲|九尾九喇嘛|九尾九喇嘛铠甲|九喇嘛).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 52,
+    "id": 52,
+    "comment": "核心设定:二代水影大蛤蜊活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 376,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:二代水影大蛤蜊活体铠甲|二代水影大蛤蜊|二代水影大蛤蜊铠甲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 53,
+    "id": 53,
+    "comment": "核心设定:二尾又旅活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 375,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:二尾又旅活体铠甲|二尾又旅|二尾又旅铠甲|又旅).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 54,
+    "id": 54,
+    "comment": "核心设定:五尾穆王活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 374,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:五尾穆王活体铠甲|五尾穆王|五尾穆王铠甲|穆王).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 55,
+    "id": 55,
+    "comment": "核心设定:八尾牛鬼活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 373,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:八尾牛鬼活体铠甲|八尾牛鬼|八尾牛鬼铠甲|牛鬼).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 56,
+    "id": 56,
+    "comment": "核心设定:六尾犀犬活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 372,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:六尾犀犬活体铠甲|六尾犀犬|六尾犀犬铠甲|犀犬).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 57,
+    "id": 57,
+    "comment": "核心设定:兽化生理与发情期",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 371,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:兽化生理与发情期|兽化生理|发情期).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 58,
+    "id": 58,
+    "comment": "核心设定:兽种差异与周期特征",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 370,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:兽种差异|周期特征|兽化周期).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 59,
+    "id": 59,
+    "comment": "核心设定:兽耳兽尾与御姐化",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 369,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:兽耳|兽尾|兽化|御姐化).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 60,
+    "id": 60,
+    "comment": "核心设定:刺激训练与性刺激训练",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 368,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:刺激训练与性刺激训练|刺激训练|性刺激训练).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 61,
+    "id": 61,
+    "comment": "核心设定:发情期三阶段",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 367,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:发情期|升温期|高峰期|回落期).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 62,
+    "id": 62,
+    "comment": "核心设定:发情期扶她化",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 366,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:发情期扶她化).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 63,
+    "id": 63,
+    "comment": "核心设定:四尾孙悟空活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 365,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:四尾孙悟空活体铠甲|四尾孙悟空|四尾孙悟空铠甲|孙悟空).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 64,
+    "id": 64,
+    "comment": "核心设定:妙木山蛤蟆活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 364,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:妙木山蛤蟆活体铠甲|妙木山蛤蟆|妙木山蛤蟆铠甲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 65,
+    "id": 65,
+    "comment": "核心设定:山椒鱼井伏活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 363,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:山椒鱼井伏活体铠甲|山椒鱼井伏|山椒鱼井伏铠甲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 66,
+    "id": 66,
+    "comment": "核心设定:忍村荷尔蒙查克拉训练流派",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 362,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:荷尔蒙查克拉训练|训练流派|忍村训练).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 67,
+    "id": 67,
+    "comment": "核心设定:忍者学校",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 361,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:忍者学校|忍校|毕业班|班级|学校课程).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 68,
+    "id": 68,
+    "comment": "核心设定:成人玩具忍具名录",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 360,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:玩具忍具|成人玩具忍具|刺激忍具|查克拉忍具).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 69,
+    "id": 69,
+    "comment": "核心设定:查克拉体态再塑",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 359,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:体态再塑|体态重塑|再发育|第二性征).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 70,
+    "id": 70,
+    "comment": "核心设定:查克拉提取训练",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 358,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:查克拉提取训练).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 71,
+    "id": 71,
+    "comment": "核心设定:查克拉等级与多次再发育",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 357,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:多次再发育|再发育|身体阶段|实力阈值).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 72,
+    "id": 72,
+    "comment": "核心设定:梦貘活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 356,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:梦貘活体铠甲|梦貘|梦貘铠甲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 73,
+    "id": 73,
+    "comment": "核心设定:活体铠甲同步等级",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 355,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:活体铠甲同步|同步率|完全铠化).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 74,
+    "id": 74,
+    "comment": "核心设定:湿骨林蛞蝓活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 354,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:湿骨林蛞蝓活体铠甲|湿骨林蛞蝓|湿骨林蛞蝓铠甲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 75,
+    "id": 75,
+    "comment": "核心设定:猿魔活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 353,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:猿魔活体铠甲|猿魔|猿魔铠甲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 76,
+    "id": 76,
+    "comment": "核心设定:等级突破与查克拉阈值",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 352,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:等级突破与查克拉阈值|等级突破|查克拉阈值).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 77,
+    "id": 77,
+    "comment": "核心设定:荷尔蒙查克拉训练总则",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 351,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:荷尔蒙查克拉训练总则).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 78,
+    "id": 78,
+    "comment": "核心设定:轮回眼畜生道活体铠甲群",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 350,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:轮回眼畜生道活体铠甲群|轮回眼畜生道|轮回眼畜生道铠甲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 79,
+    "id": 79,
+    "comment": "核心设定:通灵兽活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 349,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:通灵兽活体铠甲|通灵铠甲|通灵兽铠化).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 80,
+    "id": 80,
+    "comment": "核心设定:镰鼬镰多利活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 348,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:镰鼬镰多利活体铠甲|镰鼬镰多利|镰鼬镰多利铠甲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 81,
+    "id": 81,
+    "comment": "核心设定:高活性后的恢复与泄压",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 347,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:高活性|恢复与泄压|荷尔蒙过载|感官过载).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 82,
+    "id": 82,
+    "comment": "核心设定:龙地洞蛇系活体铠甲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 346,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(?:龙地洞蛇系活体铠甲|龙地洞蛇系|龙地洞蛇系铠甲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 83,
+    "id": 83,
+    "comment": "【核心设定:结尾】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 301,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 84,
+    "id": 84,
+    "comment": "【主要角色:起始】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 300,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 85,
+    "id": 85,
+    "comment": "角色:春野樱(幼年)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 299,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(春野樱|小樱|樱).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 86,
+    "id": 86,
+    "comment": "角色:春野樱(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 298,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(春野樱|小樱|樱).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 87,
+    "id": 87,
+    "comment": "角色:春野樱(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 297,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(春野樱|小樱|樱).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 88,
+    "id": 88,
+    "comment": "角色:日向雏田(幼年)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 296,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(日向雏田|雏田).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 89,
+    "id": 89,
+    "comment": "角色:日向雏田(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 295,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(日向雏田|雏田).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 90,
+    "id": 90,
+    "comment": "角色:日向雏田(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 294,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(日向雏田|雏田).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 91,
+    "id": 91,
+    "comment": "角色:日向花火(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 293,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(日向花火|花火).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 92,
+    "id": 92,
+    "comment": "角色:日向花火(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 292,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(日向花火|花火).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 93,
+    "id": 93,
+    "comment": "角色:山中井野(幼年)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 291,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(山中井野|井野).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 94,
+    "id": 94,
+    "comment": "角色:山中井野(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 290,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(山中井野|井野).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 95,
+    "id": 95,
+    "comment": "角色:山中井野(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 289,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(山中井野|井野).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 96,
+    "id": 96,
+    "comment": "角色:天天(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 288,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(天天).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 97,
+    "id": 97,
+    "comment": "角色:天天(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 287,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(天天).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 98,
+    "id": 98,
+    "comment": "角色:手鞠(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 286,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(手鞠).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 99,
+    "id": 99,
+    "comment": "角色:手鞠(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 285,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(手鞠).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 100,
+    "id": 100,
+    "comment": "角色:夕日红(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 284,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(夕日红).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 101,
+    "id": 101,
+    "comment": "角色:夕日红(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 283,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(夕日红).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 102,
+    "id": 102,
+    "comment": "角色:卯月夕颜",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 282,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(卯月夕颜|夕颜).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 103,
+    "id": 103,
+    "comment": "角色:御手洗红豆",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 281,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(御手洗红豆|红豆).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 104,
+    "id": 104,
+    "comment": "角色:千手纲手(幼年)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 280,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(千手纲手|纲手).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 105,
+    "id": 105,
+    "comment": "角色:千手纲手(二战)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 279,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(千手纲手|纲手).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 106,
+    "id": 106,
+    "comment": "角色:千手纲手(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 278,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(千手纲手|纲手).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 107,
+    "id": 107,
+    "comment": "角色:千手纲手(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 277,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(千手纲手|纲手).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 108,
+    "id": 108,
+    "comment": "角色:静音",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 276,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(静音).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 109,
+    "id": 109,
+    "comment": "角色:照美冥",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 275,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(照美冥|冥).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 110,
+    "id": 110,
+    "comment": "角色:多由也",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 274,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(多由也).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 111,
+    "id": 111,
+    "comment": "角色:小南(二战)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 273,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(小南).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 112,
+    "id": 112,
+    "comment": "角色:小南(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 272,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(小南).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 113,
+    "id": 113,
+    "comment": "角色:紫阳花",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 271,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(紫阳花).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 114,
+    "id": 114,
+    "comment": "角色:津奈美",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 270,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(津奈美).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 115,
+    "id": 115,
+    "comment": "角色:风花小雪",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 269,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(风花小雪|富士风雪绘|小雪|雪绘).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 116,
+    "id": 116,
+    "comment": "角色:春菜",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 268,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(春菜).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 117,
+    "id": 117,
+    "comment": "角色:紫苑",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 267,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(紫苑).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 118,
+    "id": 118,
+    "comment": "角色:红莲",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 266,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(红莲).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 119,
+    "id": 119,
+    "comment": "角色:抚子静香",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 265,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(抚子静香|静香).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 120,
+    "id": 120,
+    "comment": "角色:芙",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 264,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(芙).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 121,
+    "id": 121,
+    "comment": "角色:二位由木人",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 263,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(二位由木人|由木人).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 122,
+    "id": 122,
+    "comment": "角色:卷",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 262,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(砂忍卷|卷).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 123,
+    "id": 123,
+    "comment": "角色:叶仓",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 261,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(叶仓).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 124,
+    "id": 124,
+    "comment": "角色:药师野乃宇",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 260,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(药师野乃宇|野乃宇).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 125,
+    "id": 125,
+    "comment": "角色:漩涡玖辛奈",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 259,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(漩涡玖辛奈|玖辛奈).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 126,
+    "id": 126,
+    "comment": "角色:宇智波美琴",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 258,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波美琴|美琴).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 127,
+    "id": 127,
+    "comment": "角色:宇智波泉",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 257,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波泉|泉).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 128,
+    "id": 128,
+    "comment": "角色:宇智波治里",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 256,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波治里|治里).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 129,
+    "id": 129,
+    "comment": "角色:野原琳",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 255,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(野原琳|琳).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 130,
+    "id": 130,
+    "comment": "角色:黑土",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 254,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(黑土).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 131,
+    "id": 131,
+    "comment": "角色:萨姆伊",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 253,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(萨姆伊).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 132,
+    "id": 132,
+    "comment": "角色:不风",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 252,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(不风).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 133,
+    "id": 133,
+    "comment": "角色:阿玛鲁",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 251,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(阿玛鲁).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 134,
+    "id": 134,
+    "comment": "角色:贰",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 250,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(贰).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 135,
+    "id": 135,
+    "comment": "角色:漩涡香燐",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 249,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(漩涡香燐|香燐).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 136,
+    "id": 136,
+    "comment": "角色:大筒木辉夜",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 248,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(大筒木辉夜|辉夜).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 137,
+    "id": 137,
+    "comment": "角色:宇智波光",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 247,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波光|光).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 138,
+    "id": 138,
+    "comment": "【主要角色:结尾】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 201,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 139,
+    "id": 139,
+    "comment": "【其他角色:起始】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 200,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 140,
+    "id": 140,
+    "comment": "其他角色:漩涡鸣子(幼年)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 199,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(漩涡鸣子|鸣子).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 141,
+    "id": 141,
+    "comment": "其他角色:漩涡鸣子(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 198,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(漩涡鸣子|鸣子).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 142,
+    "id": 142,
+    "comment": "其他角色:漩涡鸣子(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 197,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(漩涡鸣子|鸣子).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 143,
+    "id": 143,
+    "comment": "其他角色:宇智波佐月(幼年)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 196,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波佐月|佐月).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 144,
+    "id": 144,
+    "comment": "其他角色:宇智波佐月(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 195,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波佐月|佐月).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 145,
+    "id": 145,
+    "comment": "其他角色:宇智波佐月(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 194,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波佐月|佐月).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 146,
+    "id": 146,
+    "comment": "其他角色:我爱罗奈(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 193,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(我爱罗奈|罗奈).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 147,
+    "id": 147,
+    "comment": "其他角色:我爱罗奈(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 192,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(我爱罗奈|罗奈).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 148,
+    "id": 148,
+    "comment": "其他角色:日向宁奈(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 191,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(日向宁奈|宁奈).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 149,
+    "id": 149,
+    "comment": "其他角色:日向宁奈(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 190,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(日向宁奈|宁奈).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 150,
+    "id": 150,
+    "comment": "其他角色:李洛可(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 189,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(李洛可|洛可|小洛).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 151,
+    "id": 151,
+    "comment": "其他角色:李洛可(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 188,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(李洛可|洛可|小洛).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 152,
+    "id": 152,
+    "comment": "其他角色:奈良鹿乃(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 187,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(奈良鹿乃|鹿乃).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 153,
+    "id": 153,
+    "comment": "其他角色:奈良鹿乃(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 186,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(奈良鹿乃|鹿乃).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 154,
+    "id": 154,
+    "comment": "其他角色:秋道丁香(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 185,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(秋道丁香|丁香).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 155,
+    "id": 155,
+    "comment": "其他角色:秋道丁香(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 184,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(秋道丁香|丁香).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 156,
+    "id": 156,
+    "comment": "其他角色:旗木卡卡希(第一部)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 183,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(旗木卡卡希|卡卡希).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 157,
+    "id": 157,
+    "comment": "其他角色:旗木卡卡希(疾风传)",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 182,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(旗木卡卡希|卡卡希).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 158,
+    "id": 158,
+    "comment": "其他角色:明日香",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 181,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(猿飞明日香|明日香).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 159,
+    "id": 159,
+    "comment": "其他角色:迈特凯莉莉",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 180,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(迈特凯莉|凯莉).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 160,
+    "id": 160,
+    "comment": "其他角色:自来夜",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 179,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(自来夜|好色仙人|蛤蟆仙人).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 161,
+    "id": 161,
+    "comment": "其他角色:大蛇姬",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 178,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(大蛇姬).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 162,
+    "id": 162,
+    "comment": "其他角色:药师兜美美",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 177,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(药师兜美|兜美|兜美前辈|兜美学姐).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 163,
+    "id": 163,
+    "comment": "其他角色:海野伊露香",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 176,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(海野伊露香|伊露香).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 164,
+    "id": 164,
+    "comment": "其他角色:千手柱华",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 175,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(千手柱华|柱华|初代目火影).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 165,
+    "id": 165,
+    "comment": "其他角色:千手扉奈",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 174,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(千手扉奈|扉奈|二代目火影).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 166,
+    "id": 166,
+    "comment": "其他角色:猿飞日和",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 173,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(猿飞日和|日和|三代目火影).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 167,
+    "id": 167,
+    "comment": "其他角色:波风水音",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 172,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(波风水音|水音|四代目火影).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 168,
+    "id": 168,
+    "comment": "其他角色:君麻璃",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 171,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(君麻璃|麻璃).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 169,
+    "id": 169,
+    "comment": "其他角色:蝎",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 170,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(蝎|赤砂之蝎).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 170,
+    "id": 170,
+    "comment": "其他角色:迪达莉",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 169,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(迪达莉).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 171,
+    "id": 171,
+    "comment": "其他角色:角都美",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 168,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(角都美|都美).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 172,
+    "id": 172,
+    "comment": "其他角色:飞段",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 167,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(飞段).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 173,
+    "id": 173,
+    "comment": "其他角色:长门",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 166,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(长门|佩恩).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 174,
+    "id": 174,
+    "comment": "其他角色:宇智波伊月",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 165,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波伊月|伊月).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 175,
+    "id": 175,
+    "comment": "其他角色:宇智波静水",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 164,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波静水|静水).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 176,
+    "id": 176,
+    "comment": "其他角色:宇智波带乃",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 163,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波带乃|带乃|阿飞).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 177,
+    "id": 177,
+    "comment": "其他角色:宇智波斑奈奈",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 162,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波斑奈|斑奈).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 178,
+    "id": 178,
+    "comment": "其他角色:宇智波泉奈",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 161,
+    "use_regex": true,
+    "keys": [
+      "/<story_scene>.*?(宇智波泉奈|泉奈).*?<\\/story_scene>/s"
+    ]
+  },
+  {
+    "index": 179,
+    "id": 179,
+    "comment": "【其他角色:结尾】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 101,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 180,
+    "id": 180,
+    "comment": "【地点:起始】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 100,
+    "use_regex": false,
+    "keys": []
+  },
+  {
+    "index": 181,
+    "id": 181,
+    "comment": "地点:云隐村",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 99,
+    "use_regex": true,
+    "keys": [
+      "/<status>[\\s\\S]*?当前位置:[^\\n<]*(云隐村)[\\s\\S]*?<\\/status>/s",
+      "/(?:云隐村)/"
+    ]
+  },
+  {
+    "index": 182,
+    "id": 182,
+    "comment": "地点:岩隐村",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 98,
+    "use_regex": true,
+    "keys": [
+      "/<status>[\\s\\S]*?当前位置:[^\\n<]*(岩隐村)[\\s\\S]*?<\\/status>/s",
+      "/(?:岩隐村)/"
+    ]
+  },
+  {
+    "index": 183,
+    "id": 183,
+    "comment": "地点:木叶村",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 97,
+    "use_regex": true,
+    "keys": [
+      "/<status>[\\s\\S]*?当前位置:[^\\n<]*(木叶村|木叶忍者村)[\\s\\S]*?<\\/status>/s",
+      "/(?:木叶村|木叶忍者村)/"
+    ]
+  },
+  {
+    "index": 184,
+    "id": 184,
+    "comment": "地点:波之国",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 96,
+    "use_regex": true,
+    "keys": [
+      "/<status>[\\s\\S]*?当前位置:[^\\n<]*(波之国)[\\s\\S]*?<\\/status>/s",
+      "/(?:波之国)/"
+    ]
+  },
+  {
+    "index": 185,
+    "id": 185,
+    "comment": "地点:砂隐村",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 95,
+    "use_regex": true,
+    "keys": [
+      "/<status>[\\s\\S]*?当前位置:[^\\n<]*(砂隐村)[\\s\\S]*?<\\/status>/s",
+      "/(?:砂隐村)/"
+    ]
+  },
+  {
+    "index": 186,
+    "id": 186,
+    "comment": "地点:雨隐村",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 94,
+    "use_regex": true,
+    "keys": [
+      "/<status>[\\s\\S]*?当前位置:[^\\n<]*(雨隐村)[\\s\\S]*?<\\/status>/s",
+      "/(?:雨隐村)/"
+    ]
+  },
+  {
+    "index": 187,
+    "id": 187,
+    "comment": "地点:雾隐村",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 93,
+    "use_regex": true,
+    "keys": [
+      "/<status>[\\s\\S]*?当前位置:[^\\n<]*(雾隐村)[\\s\\S]*?<\\/status>/s",
+      "/(?:雾隐村)/"
+    ]
+  },
+  {
+    "index": 188,
+    "id": 188,
+    "comment": "地点:音隐村",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 92,
+    "use_regex": true,
+    "keys": [
+      "/<status>[\\s\\S]*?当前位置:[^\\n<]*(音隐村|音忍村)[\\s\\S]*?<\\/status>/s",
+      "/(?:音隐村|音忍村)/"
+    ]
+  },
+  {
+    "index": 189,
+    "id": 189,
+    "comment": "地点:铁之国",
+    "enabled": true,
+    "constant": false,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 91,
+    "use_regex": true,
+    "keys": [
+      "/<status>[\\s\\S]*?当前位置:[^\\n<]*(铁之国)[\\s\\S]*?<\\/status>/s",
+      "/(?:铁之国)/"
+    ]
+  },
+  {
+    "index": 190,
+    "id": 190,
+    "comment": "【地点:结尾】",
+    "enabled": true,
+    "constant": true,
+    "selective": true,
+    "position": "after_char",
+    "depth": 4,
+    "order": 1,
+    "use_regex": false,
+    "keys": []
+  }
+]

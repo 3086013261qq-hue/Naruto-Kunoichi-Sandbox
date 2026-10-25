@@ -599,7 +599,7 @@ def build() -> Tuple[dict, dict, str]:
         position="at_depth",
         depth=0,
     )
-    status_content = find_default_status(base_entries)
+    status_content = replace_single_aliases(replace_names(find_default_status(base_entries), name_map))
     status_entry = mk_entry(
         template,
         comment="状态栏-默认（MVU待替换）",
@@ -709,24 +709,31 @@ def build() -> Tuple[dict, dict, str]:
         raise RuntimeError("timeline count != 4")
     if sum(1 for e in timeline_entries if e["enabled"]) != 1:
         raise RuntimeError("timeline enabled count != 1")
-    if len([e for e in entries if str(e.get("comment", "")).startswith(("主要角色:", "其他角色:"))]) != 92:
-        raise RuntimeError("character count != 92")
+    if len(patched_chars) != 92 or set(patched_chars) != expected_ids:
+        raise RuntimeError("character source-id coverage != 92")
     if len([e for e in entries if str(e.get("comment", "")).startswith("地点:")]) != 9:
         raise RuntimeError("location count != 9")
     if len(core_setting_entries) < 20:
         raise RuntimeError("core settings unexpectedly small")
 
-    for e in entries:
-        if str(e.get("comment", "")).startswith(("主要角色:", "其他角色:")):
-            if "兽化特征:" not in e.get("content", ""):
-                raise RuntimeError(f"character lacks beast module: {e['comment']}")
+    for sid, e in patched_chars.items():
+        if "兽化特征:" not in e.get("content", ""):
+            raise RuntimeError(f"character lacks beast module: source_id={sid} comment={e.get('comment')}")
 
     runtime_blob = "\n".join(
         [e.get("comment", "") + "\n" + e.get("content", "") + "\n" + "\n".join(e.get("keys", [])) for e in entries]
     )
-    leaked = [name for name in changed_formal_names if name in runtime_blob]
+    leaked = []
+    leak_context = []
+    for name in changed_formal_names:
+        new_name = name_map.get(name, "")
+        probe = runtime_blob.replace(new_name, "") if new_name else runtime_blob
+        if name in probe:
+            leaked.append(name)
+            idx = probe.find(name)
+            leak_context.append(probe[max(0, idx-80):idx+120].replace("\n", " "))
     if leaked:
-        raise RuntimeError("old formal names leaked: " + ", ".join(leaked))
+        raise RuntimeError("old formal names leaked: " + ", ".join(leaked) + " | contexts: " + " || ".join(leak_context))
 
     banned = ["超级赛亚人", "白金之星", "幻想杀手法则", "二阶堂红丸", "草薙流古武术"]
     banned_hit = [x for x in banned if x in runtime_blob]
