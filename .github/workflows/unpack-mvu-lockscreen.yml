@@ -1,0 +1,100 @@
+name: Unpack MVU lockscreen archives
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'media/mvu/lockscreen/*.zip'
+      - '.github/workflows/unpack-mvu-lockscreen.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Unpack ordered lockscreen pages and build manifest
+        run: |
+          python - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import json, re, shutil, zipfile
+
+          root = Path('media/mvu/lockscreen')
+          image_exts = {'.png', '.jpg', '.jpeg', '.webp', '.gif'}
+          books = []
+
+          def natural_key(s: str):
+              return [int(x) if x.isdigit() else x.lower() for x in re.split(r'(\d+)', s)]
+
+          for zpath in sorted(root.glob('*.zip'), key=lambda p: natural_key(p.name)):
+              book_id = zpath.stem
+              out = root / book_id
+              if out.exists():
+                  shutil.rmtree(out)
+              out.mkdir(parents=True, exist_ok=True)
+
+              pages = []
+              with zipfile.ZipFile(zpath) as zf:
+                  for info in zf.infolist():
+                      if info.is_dir():
+                          continue
+                      raw = info.filename.replace('\\', '/')
+                      pp = PurePosixPath(raw)
+                      if raw.startswith('__MACOSX/') or any(part.startswith('.') for part in pp.parts):
+                          continue
+                      if pp.suffix.lower() not in image_exts:
+                          continue
+                      # 防止 ZIP 路径穿越；同时保留压缩包内部原有相对目录和文件名。
+                      if pp.is_absolute() or '..' in pp.parts:
+                          raise RuntimeError(f'unsafe zip member: {raw}')
+                      target = out.joinpath(*pp.parts)
+                      target.parent.mkdir(parents=True, exist_ok=True)
+                      with zf.open(info) as src, target.open('wb') as dst:
+                          shutil.copyfileobj(src, dst)
+                      pages.append(target.as_posix())
+
+              pages.sort(key=natural_key)
+              books.append({
+                  'id': book_id,
+                  'source_zip': zpath.as_posix(),
+                  'page_count': len(pages),
+                  'pages': pages,
+              })
+              print(f'{book_id}: {len(pages)} pages')
+
+          manifest = {
+              'version': 2,
+              'mode': 'static-page-gallery',
+              'background': 'media/mvu/142996460_p0_master1200.webp',
+              'books': books,
+              'interaction': {
+                  'swipe': 'previous-next-page',
+                  'tap_center': 'enter-main-mvu',
+                  'remember_last_page': True,
+                  'auto_play': False,
+              },
+              'load_policy': {
+                  'preload_neighbors': 1,
+                  'never_preload_entire_book': True,
+              },
+          }
+          (root / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Commit extracted pages only if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/mvu/lockscreen/277699 media/mvu/lockscreen/474873 media/mvu/lockscreen/manifest.json
+          if git diff --cached --quiet; then
+            echo "Lockscreen pages are already unpacked and current."
+          else
+            git commit -m "media: unpack ordered MVU lockscreen pages"
+            git push
+          fi
