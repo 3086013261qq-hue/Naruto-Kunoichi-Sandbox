@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/build_worldbook.py'
       - 'scripts/audit_worldbook_final.py'
+      - 'scripts/apply_worldbook_refinements.py'
       - 'worldbook/**'
       - '火影忍者_沙盒_纯设定基底_v0.1.json'
       - '火影忍者_沙盒_角色条目拆分备份_v0.1.json'
@@ -29,6 +30,8 @@ jobs:
         run: python scripts/build_worldbook.py
       - name: Independent source-to-worldbook audit
         run: python scripts/audit_worldbook_final.py
+      - name: Apply approved worldbook refinements
+        run: python scripts/apply_worldbook_refinements.py
       - name: Commit generated worldbook and audit if changed
         run: |
           git config user.name "github-actions[bot]"
@@ -37,10 +40,11 @@ jobs:
                   dist/火影姬世界_worldbook-ready_v1.0.json \
                   dist/火影姬世界_世界书条目清单_v1.0.json \
                   qa/最终世界书自动组装审计_v1.0.md \
-                  qa/最终世界书逐源对照审计_v1.0.md
+                  qa/最终世界书逐源对照审计_v1.0.md \
+                  qa/世界书返工审计_v1.0.json
           if git diff --cached --quiet; then
-            echo "Worldbook and independent audit are reproducible and up to date."
+            echo "Worldbook and refinement audit are reproducible and up to date."
           else
-            git commit -m "build: refresh audited complete worldbook v1.0"
+            git commit -m "build: refresh refined complete worldbook v1.0"
             git push
           fi
