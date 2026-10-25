@@ -1,3 +1,4 @@
 build=火影姬世界_正式实机测试_v1.0
 source_head=e61b4235849aac0c82c0243ba19ab79ba1ace4bc
 module=modules/hormone-ledger
+attempt=2
