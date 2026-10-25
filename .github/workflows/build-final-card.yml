@@ -1,0 +1,43 @@
+name: build-final-card
+
+on:
+  push:
+    paths:
+      - '.github/final-card-trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rebuild hormone ledger module
+        run: python3 modules/hormone-ledger/build.py
+
+      - name: Module unit QA
+        run: npm test --prefix modules/hormone-ledger
+
+      - name: Media QA
+        run: python3 modules/hormone-ledger/qa/media.py
+
+      - name: Assemble final card JSON
+        run: python3 scripts/build_final_card.py
+
+      - name: Upload final JSON and QA
+        uses: actions/upload-artifact@v4
+        with:
+          name: fire-kunoichi-final-json
+          if-no-files-found: error
+          path: |
+            release/火影姬世界_正式实机测试_v1.0.json
+            release/火影姬世界_正式实机测试_v1.0_QA.json
