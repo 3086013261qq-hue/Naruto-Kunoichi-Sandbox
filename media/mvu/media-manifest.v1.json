@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "asset_commit": "03a84ed4461f53882ac8065dea849073b03f3ab2",
+  "background": {
+    "path": "media/mvu/142996460_p0_master1200.webp",
+    "cdn": "https://cdn.jsdelivr.net/gh/3086013261qq-hue/Naruto-Kunoichi-Sandbox@03a84ed4461f53882ac8065dea849073b03f3ab2/media/mvu/142996460_p0_master1200.webp",
+    "fit": "cover",
+    "position": "center center"
+  },
+  "lockscreen": {
+    "mode": "zip-gallery",
+    "archives": [
+      {
+        "id": "277699",
+        "path": "media/mvu/lockscreen/277699.zip",
+        "cdn": "https://cdn.jsdelivr.net/gh/3086013261qq-hue/Naruto-Kunoichi-Sandbox@03a84ed4461f53882ac8065dea849073b03f3ab2/media/mvu/lockscreen/277699.zip"
+      },
+      {
+        "id": "474873",
+        "path": "media/mvu/lockscreen/474873.zip",
+        "cdn": "https://cdn.jsdelivr.net/gh/3086013261qq-hue/Naruto-Kunoichi-Sandbox@03a84ed4461f53882ac8065dea849073b03f3ab2/media/mvu/lockscreen/474873.zip"
+      }
+    ],
+    "entry_filter": "\\.(?:png|jpe?g|webp|gif)$",
+    "sort": "natural-path-order",
+    "load_policy": {
+      "archive": "load-on-enter-volume",
+      "page": "decode-current-and-neighbors-only",
+      "neighbor_preload": 1,
+      "revoke_old_object_urls": true,
+      "never_decode_all_pages_at_once": true
+    },
+    "interaction": {
+      "swipe": "previous-next-page",
+      "tap_center": "enter-main-mvu",
+      "remember_last_page": true,
+      "auto_play": false
+    }
+  }
+}
