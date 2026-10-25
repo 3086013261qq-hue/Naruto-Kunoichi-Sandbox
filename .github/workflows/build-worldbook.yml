@@ -1,0 +1,42 @@
+name: Build complete worldbook
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_worldbook.py'
+      - 'worldbook/**'
+      - '火影忍者_沙盒_纯设定基底_v0.1.json'
+      - '火影忍者_沙盒_角色条目拆分备份_v0.1.json'
+      - '.github/workflows/build-worldbook.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Assemble and audit worldbook
+        run: python scripts/build_worldbook.py
+      - name: Commit generated worldbook
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/火影姬世界_完整世界书_v1.0.json \
+                  dist/火影姬世界_worldbook-ready_v1.0.json \
+                  dist/火影姬世界_世界书条目清单_v1.0.json \
+                  qa/最终世界书自动组装审计_v1.0.md
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+          else
+            git commit -m "build: assemble complete worldbook v1.0"
+            git push
+          fi
